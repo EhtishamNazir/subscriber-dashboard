@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+<body>
+<div class="login-wrapper">
+  <div class="left">
+    <div class="text-wrapper">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <h3>Welcome To</h3>
+      <h2>RealMBetweenWorlds</h2>
+      <div class="divider"></div>
+      <p>Login and Do Live Chats with Us.</p>
+      <div class="circle-3"></div>
+      <div class="circle-4"></div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="form-wrapper">
+      <img src="img/illustration_it_support.png" class="form-img" alt="IT Support" />
+      <h3 class="heading">Login!</h3>
+      <p class="description">Enter Your Email and Password to Login.</p>
+      <form action="">
+        <div class="cust-form-group">
+          <input type="text" placeholder="Email" class="cust-form-control" />
+          <img src="img/envelop-icon.png" class="icon-right" alt="Envelop" />
+        </div>
+        <div class="cust-form-group">
+          <img src="img/lock-icon.png" class="icon-right" alt="Lock Icon" />
+          <input type="text" placeholder="Password" class="cust-form-control pl-2" />
+          <img src="img/eye-icon.png" class="icon-right" alt="Eye Icon" />
+        </div>
+        <div class="forget-password-link">
+          <a href="forget-password.html">Forget Password?</a>
+        </div>
+        <div class="login-register-btns ml-1">
+          <button id="loginBtn" type="button">Login</button>
+          <a href="register.html">Register</a>
+        </div>
+        <div class="or-text">
+          <div class="left-line"></div>
+          <p>Or</p>
+          <div class="right-line"></div>
+        </div>
+        <div class="social-btns">
+          <button class="facebook-btn">
+            <img src="img/fb-icon.png" alt="FB Icon" />
+          </button>
+          <button class="google-btn">
+            <img src="img/google-icon.png" alt="Google Icon" />
+          </button>
+          <button class="twitter-btn">
+            <img src="img/twit-icon.png" alt="Twitter Icon" />
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="authenticationModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Authenticate Your Account <img src="img/auth-icon.png" alt="Authentication Icon" /></h1>
+    </div>
+    <div class="modal-content-body">
+      <p class="modal-content-body-text">We Are Protecting your Account. Please Confirm Your Account by Entering Authorization Code Sent to Your Email Adress </p>
+      <div class="auth-code-items">
+        <div class="auth-code-item">
+          <input type="text" value="3" class="auth-code-item-text" />
+        </div>
+        <div class="auth-code-item">
+          <input type="text" value="4" class="auth-code-item-text" />
+        </div>
+        <div class="auth-code-item">
+          <input type="text" value="2" class="auth-code-item-text" />
+        </div>
+        <div class="auth-code-item">
+          <input type="text" value="0" class="auth-code-item-text" />
+        </div>
+        <div class="auth-code-item">
+          <input type="text" value="0" class="auth-code-item-text" />
+        </div>
+        <div class="auth-code-item">
+          <input type="text" value="1" class="auth-code-item-text" />
+        </div>
+      </div>
+      <div class="resend-code-btn">
+        <button>resend code</button>
+      </div>
+      <div class="verify-login-btn">
+        <button id="verifyBtn">Verify Login</button>
+      </div>
+      <div class="not-now-btn">
+        <button id="notNow">Not Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="successfullModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Login Successfull..!</h1>
+    </div>
+    <div class="modal-content-body">
+      <div class="success-img">
+        <img src="img/success-img.png" alt="Success" />
+      </div>
+      <p class="modal-content-body-text">Login is Done Successfully.</p>
+      <div class="verify-login-btn">
+        <button id="doneBtn">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/main.js"></script>
+  <script>
+  // Get the modal
+  var authenticationModal = document.getElementById("authenticationModal");
+  var successfullModal = document.getElementById("successfullModal");
+
+  // Get the button that opens the modal
+  var loginBtn = document.getElementById("loginBtn");
+  var verifyBtn = document.getElementById("verifyBtn");
+
+  // Get the <span> element that closes the modal
+  var notNow = document.getElementById("notNow");
+  var doneBtn = document.getElementById("doneBtn");
+
+  // When the user clicks the button, open the modal 
+  loginBtn.onclick = function() {
+    authenticationModal.style.display = "block";
+  }
+  verifyBtn.onclick = function() {
+    successfullModal.style.display = "block";
+    authenticationModal.style.display = "none";
+  }
+  // When the user clicks on <span> (x), close the modal
+  notNow.onclick = function() {
+    authenticationModal.style.display = "none";
+  }
+  doneBtn.onclick = function() {
+    successfullModal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+</body>
+</head>

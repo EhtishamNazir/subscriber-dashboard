@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forget Password - Code Verification</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+<body>
+<div class="login-wrapper">
+  <div class="left">
+    <div class="text-wrapper">
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <h3>Welcome To</h3>
+      <h2>RealMBetweenWorlds</h2>
+      <div class="divider"></div>
+      <p>Login and Do Live Chats with Us.</p>
+      <div class="circle-3"></div>
+      <div class="circle-4"></div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="form-wrapper">
+      <img src="img/illustration_it_support.png" class="form-img" alt="IT Support" />
+      <h3 class="heading">Forget Password..!</h3>
+      <p class="description">Enter email for code to reset password</p>
+      <form action="">
+        <div class="cust-form-group">
+          <input type="text" placeholder="Enter Verification Code" class="cust-form-control" />
+          <img src="img/code-verify-icon.png" class="icon-right" alt="Code Verification" />
+        </div>
+        <div class="send-code-btn">
+          <button id="forgetPasswordCodeVerifyBtn" type="button">Verify</button>
+        </div>
+        <div class="resend-code-btn">
+          <button type="button">Resend Code</button>
+        </div>
+        <div class="back-link">
+          <a href="forget-password.html">Back</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="resetPasswordModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Reset Password</h1>
+    </div>
+    <div class="modal-content-body">
+      <p class="modal-content-body-text">Enter a Strong Password.</p>
+      <form action="">
+        <div class="cust-form-group">
+          <img src="img/lock-icon.png" class="icon-right" alt="Lock Icon" />
+          <input type="text" placeholder="Password" class="cust-form-control pl-2" />
+        </div>
+        <div class="cust-form-group">
+          <img src="img/lock-icon.png" class="icon-right" alt="Lock Icon" />
+          <input type="text" placeholder="Confirm Password" class="cust-form-control pl-2" />
+        </div>
+        <div class="login-register-btns">
+          <button id="resetPasswordSuccessBtn" type="button" class="active">Reset Password</button>
+          <button id="resetPasswordNotNowBtn" type="button">Not Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="passwordResetSuccessModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Congratulations</h1>
+    </div>
+    <div class="modal-content-body">
+      <div class="success-img">
+        <img src="img/success-img-2.png" alt="Success" />
+      </div>
+      <p class="modal-content-body-text">Login is Done Successfully.</p>
+      <div class="verify-login-btn">
+        <button id="resetPasswordSuccessDoneBtn" type="button">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/main.js"></script>
+  <script>
+  // Get the modal
+  var resetPasswordModal = document.getElementById("resetPasswordModal");
+  var resetPasswordSuccessModal = document.getElementById("passwordResetSuccessModal");
+
+  // Get the button that opens the modal
+  var forgetPasswordCodeVerifyBtn = document.getElementById("forgetPasswordCodeVerifyBtn");
+  var resetPasswordSuccessBtn = document.getElementById("resetPasswordSuccessBtn");
+
+  // Get the <span> element that closes the modal
+  var resetPasswordNotNowBtn = document.getElementById("resetPasswordNotNowBtn");
+  var resetPasswordSuccessDoneBtn = document.getElementById("resetPasswordSuccessDoneBtn");
+
+  // When the user clicks the button, open the modal 
+  forgetPasswordCodeVerifyBtn.onclick = function() {
+    resetPasswordModal.style.display = "block";
+  }
+  resetPasswordSuccessBtn.onclick = function() {
+    resetPasswordModal.style.display = "none";
+    resetPasswordSuccessModal.style.display = "block";
+  }
+  // When the user clicks on <span> (x), close the modal
+  resetPasswordNotNowBtn.onclick = function() {
+    resetPasswordModal.style.display = "none";
+  }
+  resetPasswordSuccessDoneBtn.onclick = function() {
+    resetPasswordSuccessModal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+</body>
+</head>
