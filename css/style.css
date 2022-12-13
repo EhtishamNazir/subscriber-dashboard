@@ -458,7 +458,7 @@ Mobile Menu Styles
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2000;
   top: 0;
   left: 0;
   background-color: var(--color-1);
@@ -1087,6 +1087,19 @@ Styles For Responsiveness
 		width: 100%;
 		display: block;
 		margin-bottom: 10px;
+	}
+}
+@media(max-width: 700px){
+	.subscriber-plan-header .navbar ul.navbar-menu{
+		display: none;
+	}
+	.subscriber-plan-header .navbar .toggler-btn{
+		display: block;
+	}
+	.pricing-plan-items .pricing-plan-item{
+		width: 100%;
+		margin: ;
+		margin-bottom: 20px;
 	}
 }
 @media(min-width: 481px) and (max-width: 768px){
