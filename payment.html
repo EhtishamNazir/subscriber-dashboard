@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payments</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/slider.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+<body>
+<!-- Header Section Starts -->
+<header class="subscriber-plan-header">
+  <nav class="navbar">
+    <ul class="navbar-menu">
+      <li><a href="#">accounts</a></li>
+      <li><a href="index.html">plans</a></li>
+      <li><a href="payment.html" class="active">payment</a></li>
+      <li><a href="#">start</a></li>
+    </ul>
+    <div class="start-as-guest-btn">
+      <a href="#">Start as Guest</a>
+    </div>
+    <div class="toggler-btn">
+      <button onclick="openNav()">&#9776;</button>
+    </div>
+  </nav>
+  <div class="heading">
+    <h1>Payment</h1>
+  </div>
+  <div class="description">
+    <p>Make Payment to Subscribe your Plan</p>
+  </div>
+</header>
+<!-- Header Section Ends -->
+
+<!-- Mobile Menu Starts -->
+<div id="subscriberPlanMobileMenu" class="subscriber-plan-mobile-menu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Accounts</a>
+  <a href="index.html">Plans</a>
+  <a href="payment.html" class="active">Payment</a>
+  <a href="#">Start</a>
+</div>
+<!-- Mobile Menu Ends -->
+
+<!-- Payment Card Section Starts -->
+<div class="payment-card">
+  <div class="heading">
+    <h2>choose card</h2>
+  </div>
+  <div class="description">
+    <p>Choose Your Card for the Payment</p>
+  </div>
+  <div class="slide-container swiper" id="cardsSlider">
+    <div class="slide-content">
+      <div class="card-wrapper swiper-wrapper">
+        <div class="card swiper-slide">
+          <div class="card-content">
+              <img src="img/card-3.png" alt="Card Image" />
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <img src="img/card-2.png" alt="Card Image" />
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <img src="img/card-3.png" alt="Card Image" />
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <img src="img/card-2.png" alt="Card Image" /> 
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <img src="img/card-3.png" alt="Card Image" />
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+            <img src="img/card-2.png" alt="Card Image" /> 
+          </div>
+        </div>
+        <div class="card swiper-slide">
+          <div class="card-content">
+             <img src="img/card-3.png" alt="Card Image" /> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="card-details">
+    <form action="">
+      <div class="cust-form-group-cont">
+        <div class="cust-form-group">
+          <input type="text" placeholder="Card Name" class="cust-form-control" />
+          <img src="img/card-sign.png" class="icon-right" alt="Card Name" />
+        </div>
+        <div class="cust-form-group">
+          <input type="text" placeholder="Card Number" class="cust-form-control" />
+          <img src="img/code-verify-icon.png" class="icon-right" alt="Card Number" />
+        </div>
+      </div>
+      <div class="cust-form-group-cont">
+        <div class="cust-form-group">
+          <input type="date" placeholder="Expiry Date" class="cust-form-control" />
+        </div>
+        <div class="cust-form-group">
+          <input type="text" placeholder="CVV" class="cust-form-control" />
+        </div>
+      </div>
+      <div class="make-payment-btn">
+        <button id="makePaymentBtn" type="button">make payment</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Payment Card Section Ends -->
+
+<!-- Modals Section Starts -->
+<!-- Payment Done Notification Modal -->
+<div id="paymentDoneNotificationModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Congratulations</h1>
+    </div>
+    <div class="modal-content-body">
+      <div class="success-img">
+        <img src="img/success-img-2.png" alt="Success" />
+      </div>
+      <p class="modal-content-body-text">Your Plan is Purchased Successfully...! Please Do some wait for Approval</p>
+      <p class="modal-content-body-text">You are Now Able to Do a Live Stream or For Your Favourite Chats.</p>
+      <div class="verify-login-btn">
+        <button id="paymentDoneNotificationDoneBtn" type="button">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Payment Done Application Approved Modal -->
+<div id="paymentDoneApplicationApprovedModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Congratulations</h1>
+    </div>
+    <div class="modal-content-body">
+      <div class="success-img">
+        <img src="img/success-img-3.png" alt="Success" />
+      </div>
+      <p class="modal-content-body-text">Your request is Approved  Successfully...! You Can use Application Now.</p>
+      <p class="modal-content-body-text">You are Now Able to Do a Live Stream or For Your Favourite Chats.</p>
+      <div class="verify-login-btn">
+        <button id="paymentDoneApplicationApprovedDoneBtn" type="button">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Application Rejected Modal -->
+<div id="applicationRejectedModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Sorry..!</h1>
+    </div>
+    <div class="modal-content-body">
+      <div class="success-img">
+        <img src="img/failed-img.png" alt="Rejected" />
+      </div>
+      <p class="modal-content-body-text">Your request is Not Approved By Admin..! Contact To Admin Now.</p>
+      <p class="modal-content-body-text">You are Now Able to Do a Live Stream or For Your Favourite Chats.</p>
+      <div class="verify-login-btn">
+        <button id="applicationRejectedContactBtn" type="button">Contact</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modals Section Ends -->
+
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("subscriberPlanMobileMenu").style.width = "100%";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingLeft = "30px";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingRight = "30px";
+    }
+
+    function closeNav() {
+      document.getElementById("subscriberPlanMobileMenu").style.width = "0";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingLeft = "0";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingRight = "0";
+    }
+  </script>
+  <script>
+    // Get the modal
+    var paymentDoneNotificationModal = document.getElementById("paymentDoneNotificationModal");
+    var paymentDoneApplicationApprovedModal = document.getElementById("paymentDoneApplicationApprovedModal");
+    var applicationRejectedModal = document.getElementById("applicationRejectedModal");
+
+    // Get the button that opens the modal
+    var makePaymentBtn = document.getElementById("makePaymentBtn");
+    var paymentDoneNotificationDoneBtn = document.getElementById("paymentDoneNotificationDoneBtn");
+    var paymentDoneApplicationApprovedDoneBtn = document.getElementById("paymentDoneApplicationApprovedDoneBtn");
+    var applicationRejectedContactBtn = document.getElementById("applicationRejectedContactBtn");
+  
+    // When the user clicks the button, open the modal 
+    makePaymentBtn.onclick = function() {
+      paymentDoneNotificationModal.style.display = "block";
+    }
+    paymentDoneNotificationDoneBtn.onclick = function() {
+      paymentDoneNotificationModal.style.display = "none";
+      paymentDoneApplicationApprovedModal.style.display = "block";
+    }
+    paymentDoneApplicationApprovedDoneBtn.onclick = function() {
+      paymentDoneApplicationApprovedModal.style.display = "none";
+      applicationRejectedModal.style.display = "block";
+    }
+    applicationRejectedContactBtn.onclick = function() {
+      applicationRejectedModal.style.display = "none";
+    }
+  </script>
+</body>
+</head>

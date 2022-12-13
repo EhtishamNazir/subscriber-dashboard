@@ -30,6 +30,9 @@ ul{
 	padding-left: 20px;
 }
 
+/*-------------------------------
+Register and Login Pages Styles
+-------------------------------*/
 .login-wrapper{
 	widows: 100%;
 	height: 100vh;
@@ -368,11 +371,333 @@ ul{
 	cursor: pointer;
 }
 
+/*---------------
+Header Styles
+---------------*/
+.subscriber-plan-header{
+	width: 100%;
+	height: 500px;
+	background-image: url('../img/header-bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.subscriber-plan-header .navbar{
+	width: 90%;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.subscriber-plan-header .navbar ul li{
+	display: inline-block;
+}
+.subscriber-plan-header .navbar ul li a{
+	font-size: 22px;
+	font-weight: 300;
+	color: #ffffff;
+	padding: 5px 25px;
+	text-transform: capitalize;
+	transition: all 0.5s ease;
+	border-radius: 3px;
+}
+.subscriber-plan-header .navbar ul li a:hover,
+.subscriber-plan-header .navbar ul li a.active{
+	background: #F2F2F2;
+	color: var(--color-1);
+	font-weight: 600;
+}
+.subscriber-plan-header .navbar .start-as-guest-btn a{
+	font-size: 22px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 15px 25px;
+	text-transform: capitalize;
+	transition: all 0.5s ease;
+	border: 1px solid #FFFFFF;
+	border-radius: 6px;
+}
+.subscriber-plan-header .navbar .start-as-guest-btn a:hover,
+.subscriber-plan-header .navbar .start-as-guest-btn a.active{
+	background: #F2F2F2;
+	color: var(--color-1);
+}
+.subscriber-plan-header .navbar .toggler-btn{
+	display: none;
+}
+.subscriber-plan-header .navbar .toggler-btn button{
+	font-size: 34px;
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+}
+.subscriber-plan-header .heading{
+	text-align: center;
+	margin: 40px 0 10px 0;
+}
+.subscriber-plan-header .heading h1{
+	font-size: 50px;
+	font-weight: 600;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.subscriber-plan-header .description{
+	text-align: center;
+}
+.subscriber-plan-header .description p {
+	font-size: 30px;
+	font-weight: 300;
+	color: #ffffff;
+}
+/*-------------------
+Mobile Menu Styles
+-------------------*/
+.subscriber-plan-mobile-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--color-1);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.subscriber-plan-mobile-menu a {
+  padding: 10px 8px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+.subscriber-plan-mobile-menu a:hover,
+.subscriber-plan-mobile-menu a.active {
+  background: #F2F2F2;
+	color: var(--color-1);
+	font-weight: 600;
+}
+.subscriber-plan-mobile-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+/*------------------------
+Pricing Plan Page Styles
+------------------------*/
+.pricing-plan-items{
+	width: 80%;
+	margin: -150px auto 50px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.pricing-plan-items .pricing-plan-item{
+	width: 31%;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-header{
+	width: 100%;
+	background: #FB7B05;
+	padding: 20px 0;
+	border-radius: 10px 10px 0px 0px;
+}
+.pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-header{
+	background-color: #1877F2;
+}
+.pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-header{
+	background-color: #D23A83;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-header .plan-name{
+	text-align: center;
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body{
+	padding: 30px 20px;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-price{
+	font-size: 28px;
+	font-weight: 500;
+	color: #FB7B05;
+	text-align: center;
+	text-transform: capitalize;
+}
+.pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-body .plan-price{
+	color: #1877F2;
+}
+.pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-body .plan-price{
+	color: #D23A83;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-price span{
+	font-size: 24px;
+	color: #BDBDBD;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description{
+	padding: 20px 0;
+	text-align: center;
+	border-bottom: 1px solid #BDBDBD;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description p{
+	font-size: 18px;
+	font-weight: 300;
+	padding: 0 30px;
+	color: var(--color-3);
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features{
+	padding: 30px 0 20px 0;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .tick-circle{
+	width: 10%;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li img{
+	width: 25px;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .text{
+	width: 85%;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li span{
+	font-size: 18px;
+	font-weight: 300;
+	color: var(--color-3);
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn{
+	text-align: center;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn button{
+	font-size: 17px;
+	font-weight: 600;
+	color: #FB7B05;
+	background-color: transparent;
+	border: 1px solid #FB7B05;
+	border-radius: 6.07314px;
+	text-transform: capitalize;
+	padding: 10px 0;
+	width: 60%;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button{
+	color: #1877F2;
+	border: 1px solid #1877F2;
+}
+.pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button{
+	color: #D23A83;
+	border: 1px solid #D23A83;
+}
+.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn button:hover{
+	background-color: #FB7B05;
+	color: #ffffff;
+}
+.pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button:hover{
+	background-color: #1877F2;
+}
+.pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button:hover{
+	background-color: #D23A83;
+}
+
+/*--------------------
+Payment Card Styles
+--------------------*/
+.payment-card{
+	width: 60%;
+	margin: -150px auto 50px auto;
+	background: #FFFFFF;
+	padding: 30px 10px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+.payment-card .heading h2{
+	font-size: 40px;
+	font-weight: 600;
+	color: var(--color-3);
+	text-transform: capitalize;
+	text-align: center;
+}
+.payment-card .description{
+	margin: 10px 0;
+	text-align: center;
+}
+.payment-card .description p{
+	font-size: 24px;
+	font-weight: 300;
+	color: var(--color-3);
+}
+.payment-card .card-details{
+	width: 75%;
+	margin: 20px auto;
+}
+.payment-card .card-details form .cust-form-group-cont{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.payment-card .card-details form .cust-form-group{
+	width: 48%;
+	height: 50px;
+	padding: 0 15px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1.5px solid #000821;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.payment-card .card-details form .cust-form-group .cust-form-control{
+	width: 90%;
+	height: 100%;
+	border: none;
+	outline: none;
+	display: block;
+	font-size: 20px;
+	font-weight: 300;
+	padding-top: 5px;
+	color: var(--color-3);
+}
+.payment-card .card-details form .cust-form-group input[type="date"]{
+	width: 100%;
+}
+.payment-card .card-details form .cust-form-group .cust-form-control::placeholder{
+	font-size: 18px;
+	font-weight: 300;
+	color: var(--color-3);
+}
+.payment-card .card-details form .make-payment-btn button{
+	width: 100%;
+	background: #45308A;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: 500;
+	text-transform: capitalize;
+	padding: 10px 0;
+	cursor: pointer;
+}
 
 
-/*------------------
-Modal Styles
-------------------*/
+
+/*--------------------------------------
+Register and Login Pages Modals Styles
+---------------------------------------*/
 .modal {
   display: none; 
   position: fixed;
@@ -566,6 +891,12 @@ Modal Styles
 	background-color: #45308A;
 	color: white;
 }
+#paymentDoneNotificationModal
+.modal-content .modal-content-body .modal-content-body-text,
+#paymentDoneApplicationApprovedModal .modal-content .modal-content-body .modal-content-body-text,
+#applicationRejectedModal .modal-content .modal-content-body .modal-content-body-text{
+	margin-bottom: 15px;
+}
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -657,6 +988,61 @@ Styles For Responsiveness
 	.login-wrapper .right .form-wrapper form .social-btns button{
 		padding: 10px 0;
 	}
+
+	.subscriber-plan-header .navbar{
+		padding: 20px 0;
+	}
+	.subscriber-plan-header .navbar .start-as-guest-btn a{
+		font-size: 18px;
+	}
+	.subscriber-plan-header .navbar ul.navbar-menu{
+		display: none;
+	}
+	.subscriber-plan-header .navbar .toggler-btn{
+		display: block;
+	}
+	.subscriber-plan-header .heading{
+		margin: 40px 0 10px 0;
+	}
+	.subscriber-plan-header .heading h1{
+		font-size: 30px;
+	}
+	.subscriber-plan-header .description p{
+		padding: 0 20px;
+		font-size: 20px;
+	}
+
+	.pricing-plan-items{
+		width: 95%;
+		margin-top: -200px;
+	}
+	.pricing-plan-items .pricing-plan-item{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.payment-card{
+		width: 95%;
+		margin-top: -200px;
+	}
+	.payment-card .heading h2{
+		font-size: 30px;
+	}
+	.payment-card .description p{
+		font-size: 20px;
+		padding: 0 20px;
+	}
+	.payment-card .card-details{
+		width: 95%;
+	}
+	.payment-card .card-details form .cust-form-group-cont{
+		margin-bottom: 0;
+	}
+	.payment-card .card-details form .cust-form-group{
+		width: 100%;
+	}
+
+
 	.modal{
 		padding-top: 30px;
 	}
@@ -753,6 +1139,54 @@ Styles For Responsiveness
 	.login-wrapper .right .form-wrapper form .social-btns button{
 		padding: 10px 0;
 	}
+
+	.subscriber-plan-header .navbar ul li a,
+	.subscriber-plan-header .navbar .start-as-guest-btn a{
+		font-size: 18px;
+	}
+	.subscriber-plan-header .heading h1{
+		font-size: 46px;
+	}
+	.subscriber-plan-header .description{
+		word-break: break-all;
+	}
+	.subscriber-plan-header .description p{
+		font-size: 24px;
+	}
+
+	.pricing-plan-items{
+		width: 90%;
+	}
+	.pricing-plan-items .pricing-plan-item .pricing-plan-item-body{
+		padding: 30px 10px;
+	}
+	.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-price{
+		font-size: 22px;
+	}
+	.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-price span{
+		font-size: 20px;
+	}
+	.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description p{
+		padding: 0 10px;
+	}
+	.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .tick-circle{
+		width: 15%;
+	}
+	.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .text{
+		width: 80%;
+	}
+	.pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li span{
+		font-size: 16px;
+	}
+
+	.payment-card{
+		width: 90%;
+		margin-top: -175px;
+	}
+	.payment-card .card-details{
+		width: 80%;
+	}
+
 	.modal{
 		padding-top: 100px;
 	}
@@ -795,6 +1229,15 @@ Styles For Responsiveness
 	.login-wrapper .right .form-wrapper form .cust-checkbox .container{
 		font-size: 16px;
 	}
+
+	.pricing-plan-items{
+		width: 90%;
+	}
+
+	.payment-card{
+		width: 80%;
+	}
+
 	.modal{
 		padding-top: 100px;
 	}

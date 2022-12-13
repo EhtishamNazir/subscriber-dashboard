@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Index</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Font -->
@@ -13,8 +13,239 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 <body>
+<!-- Header Section Starts -->
+<header class="subscriber-plan-header">
+  <nav class="navbar">
+    <ul class="navbar-menu">
+      <li><a href="#">accounts</a></li>
+      <li><a href="index.html" class="active">plans</a></li>
+      <li><a href="payment.html">payment</a></li>
+      <li><a href="#">start</a></li>
+    </ul>
+    <div class="start-as-guest-btn">
+      <a href="#">Start as Guest</a>
+    </div>
+    <div class="toggler-btn">
+      <button onclick="openNav()">&#9776;</button>
+    </div>
+  </nav>
+  <div class="heading">
+    <h1>Choose Your Plan</h1>
+  </div>
+  <div class="description">
+    <p>Choose Subscription Plan Which is best for Your Future</p>
+  </div>
+</header>
+<!-- Header Section Ends -->
 
+<!-- Mobile Menu Starts -->
+<div id="subscriberPlanMobileMenu" class="subscriber-plan-mobile-menu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Accounts</a>
+  <a href="index.html" class="active">Plans</a>
+  <a href="payment.html">Payment</a>
+  <a href="#">Start</a>
+</div>
+<!-- Mobile Menu Ends -->
+
+<!-- Pricing Plans Section Starts -->
+<div class="pricing-plan-items">
+  <div class="pricing-plan-item">
+    <div class="pricing-plan-item-header">
+      <h4 class="plan-name">basic</h4>
+    </div>
+    <div class="pricing-plan-item-body">
+      <div class="plan-price">
+        <h2>50$ <span>/month</span></h2>
+      </div>
+      <div class="plan-description">
+        <p>A Basic plan for better Use in Future</p>
+      </div>
+      <div class="plan-features">
+        <ul>
+          <li>
+            <div class="tick-circle">
+              <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="subscribe-btn">
+        <button>subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="standard-plan pricing-plan-item">
+    <div class="pricing-plan-item-header">
+      <h4 class="plan-name">standard</h4>
+    </div>
+    <div class="pricing-plan-item-body">
+      <div class="plan-price">
+        <h2>100$ <span>/month</span></h2>
+      </div>
+      <div class="plan-description">
+        <p>A Standard plan for better Use in Future </p>
+      </div>
+      <div class="plan-features">
+        <ul>
+          <li>
+            <div class="tick-circle">
+              <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="subscribe-btn">
+        <button>subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="premium-plan pricing-plan-item">
+    <div class="pricing-plan-item-header">
+      <h4 class="plan-name">premium</h4>
+    </div>
+    <div class="pricing-plan-item-body">
+      <div class="plan-price">
+        <h2>200$ <span>/month</span></h2>
+      </div>
+      <div class="plan-description">
+        <p>A Premium plan for better Use in Future </p>
+      </div>
+      <div class="plan-features">
+        <ul>
+          <li>
+            <div class="tick-circle">
+              <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+          <li>
+            <div class="tick-circle">
+              <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+            </div> 
+            <div class="text">
+              <span>Lorem ipsum dolor sit amet con</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="subscribe-btn">
+        <button>subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Pricing Plans Section Ends -->
 
   <script src="js/main.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("subscriberPlanMobileMenu").style.width = "100%";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingLeft = "30px";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingRight = "30px";
+    }
+
+    function closeNav() {
+      document.getElementById("subscriberPlanMobileMenu").style.width = "0";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingLeft = "0";
+      document.getElementById("subscriberPlanMobileMenu").style.paddingRight = "0";
+    }
+  </script>
 </body>
 </head>
