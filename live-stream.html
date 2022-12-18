@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/dashboard.css">
+<body>
+<!-- Header Section Starts -->
+<header class="header">
+  <div class="toggler-btn">
+    <button onclick="openSidebar()">&#9776;</button>
+  </div>
+  <div class="logo">
+    <img src="img/dashboard-logo.png" alt="Logo" />
+  </div>
+  <div class="search-bar-notification">
+    <div class="search-bar">
+      <form action="">
+        <div class="search-bar-container">
+          <div class="search-icon">
+            <img src="img/dashboard-search-icon.png" alt="Search" />
+          </div>
+          <input type="text" placeholder="Search..." />
+        </div>
+      </form>
+    </div>
+    <div class="notification">
+      <button class="stream-btn">start live stream</button>
+      <button class="notification-btn">
+        <span></span>
+        <img src="img/notification-icon.png" alt="Notification Icon" />
+      </button>
+    </div>
+  </div>
+</header>
+<!-- Header Section Ends -->
+
+<!-- Sidebar and Content Section Starts -->
+<div class="sidebar-main-content">
+  <!-- Sidebar Section Starts -->
+  <div class="sidebar">
+    <!-- User Section Starts -->
+    <div class="user-info-dropdown-cont">
+      <div class="user-info-cont">
+        <img class="user-img" src="img/user-profile.png" alt="User Image" />
+        <div class="name-type-cont">
+          <p class="name">Gavano</p>
+          <p class="type">Subscriber</p>
+        </div>
+      </div>
+      <div class="user-dropdown-cont">
+        <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+          <img src="img/more-square.png" alt="More Info Icon" />
+        </button>
+        <div id="more-info-dropdown-content" class="dropdown-content">
+          <ul class="more-links">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- User Section Ends -->
+    <!-- Sidebar Links Section Starts -->
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="dashboard.html" class="active">
+            <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
+            <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
+            dashboard
+          </a>
+        </li>
+        <li>
+          <a href="communications.html">
+            <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+            <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+            communications
+          </a>
+        </li>
+        <li>
+          <a href="applications.html">
+            <img class="dark-icon" src="img/user-icon-square.png" alt="User Icon" />
+            <img class="light-icon" src="img/user-icon-square.png" alt="User Icon" />
+            applications
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="profile.html">
+            <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+            <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+            profile
+          </a>
+        </li>
+        <li>
+          <a href="setting.html">
+            <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            setting
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar Links Section Ends -->
+    <div class="logout-btn">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="img/logout-icon.png" alt="Logout" /> logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Sidebar Section Ends -->
+  <!-- Main Content Section Starts -->
+  <div class="main-content">
+    <h1 style="margin: 10px 0;text-align: center;">Live Stream is Ongoing</h1>
+  </div>
+  <!-- Main Content Section Ends -->
+</div>
+<!-- Sidebar and Content Section Ends -->
+
+<!-- Mobile Sidebar Section Starts -->
+<div id="mobileSidebar" class="mobileSidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+  <!-- User Section Starts -->
+  <div class="user-info-dropdown-cont">
+    <div class="user-info-cont">
+      <img class="user-img" src="img/user-profile.png" alt="User Image" />
+      <div class="name-type-cont">
+        <p class="name">Gavano</p>
+        <p class="type">Subscriber</p>
+      </div>
+    </div>
+    <div class="user-dropdown-cont">
+      <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+        <img src="img/more-square.png" alt="More Info Icon" />
+      </button>
+      <div id="more-info-dropdown-content" class="dropdown-content">
+        <ul class="more-links">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- User Section Ends -->
+  <!-- Sidebar Links Section Starts -->
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="dashboard.html" class="active">
+          <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
+          <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
+          dashboard
+        </a>
+      </li>
+      <li>
+        <a href="communications.html">
+          <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+          <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+          communications
+        </a>
+      </li>
+      <li>
+        <a href="applications.html">
+          <img class="dark-icon" src="img/user-icon-square.png" alt="User Icon" />
+          <img class="light-icon" src="img/user-icon-square.png" alt="User Icon" />
+          applications
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="divider"></div>
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="profile.html">
+          <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+          <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+          profile
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          setting
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Sidebar Links Section Ends -->
+  <div class="logout-btn">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="img/logout-icon.png" alt="Logout" /> logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Mobile Sidebar Section Ends -->
+
+<!-- Join As Guest Modal -->
+<!-- <div id="joinAsGuestModal" class="modal" style="display: block;">
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Join as Guest</h1>
+    </div>
+    <div class="modal-content-body">
+      <p class="modal-content-body-text">Paste the link Here. To Join Live</p>
+      <p class="modal-content-body-text">Streaming as a Guest</p>
+      <div class="paste-stream-link">
+        <form action="">
+          <input type="text" placeholder="Paste Link Here" />
+          <div class="login-register-btns">
+            <button id="joinAsGuestJoinBtn" type="button" class="active">Join</button>
+            <button id="joinAsGuestCancelInviteBtn" type="button">Cancel Invite</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Modals Section Ends -->
+
+  <script src="js/main.js"></script>
+  <script>
+    function showUserMoreInfoDropdown() {
+      var moreInfoDropdownContent = document.getElementById("more-info-dropdown-content");
+      moreInfoDropdownContent.classList.toggle("active");
+    }
+  </script>
+  <script>
+    function openSidebar() {
+      document.getElementById("mobileSidebar").style.width = "80%";
+      document.getElementById("main").style.marginLeft = "80%";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeSidebar() {
+      document.getElementById("mobileSidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+  <script>
+    function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("past-streams-items");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("past-ongoing-stream-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+  
+y</body>
+</head>

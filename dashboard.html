@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/dashboard.css">
+<body>
+<!-- Header Section Starts -->
+<header class="header">
+  <div class="toggler-btn">
+    <button onclick="openSidebar()">&#9776;</button>
+  </div>
+  <div class="logo">
+    <img src="img/dashboard-logo.png" alt="Logo" />
+  </div>
+  <div class="search-bar-notification">
+    <div class="search-bar">
+      <form action="">
+        <div class="search-bar-container">
+          <div class="search-icon">
+            <img src="img/dashboard-search-icon.png" alt="Search" />
+          </div>
+          <input type="text" placeholder="Search..." />
+        </div>
+      </form>
+    </div>
+    <div class="notification">
+      <button class="stream-btn">start live stream</button>
+      <button class="notification-btn">
+        <span></span>
+        <img src="img/notification-icon.png" alt="Notification Icon" />
+      </button>
+    </div>
+  </div>
+</header>
+<!-- Header Section Ends -->
+
+<!-- Sidebar and Content Section Starts -->
+<div class="sidebar-main-content">
+  <!-- Sidebar Section Starts -->
+  <div class="sidebar">
+    <!-- User Section Starts -->
+    <div class="user-info-dropdown-cont">
+      <div class="user-info-cont">
+        <img class="user-img" src="img/user-profile.png" alt="User Image" />
+        <div class="name-type-cont">
+          <p class="name">Gavano</p>
+          <p class="type">Subscriber</p>
+        </div>
+      </div>
+      <div class="user-dropdown-cont">
+        <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+          <img src="img/more-square.png" alt="More Info Icon" />
+        </button>
+        <div id="more-info-dropdown-content" class="dropdown-content">
+          <ul class="more-links">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- User Section Ends -->
+    <!-- Sidebar Links Section Starts -->
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="dashboard.html" class="active">
+            <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
+            <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
+            dashboard
+          </a>
+        </li>
+        <li>
+          <a href="communications.html">
+            <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+            <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+            communications
+          </a>
+        </li>
+        <li>
+          <a href="applications.html">
+            <img class="dark-icon" src="img/user-icon-square.png" alt="User Icon" />
+            <img class="light-icon" src="img/user-icon-square.png" alt="User Icon" />
+            applications
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="profile.html">
+            <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+            <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+            profile
+          </a>
+        </li>
+        <li>
+          <a href="setting.html">
+            <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            setting
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar Links Section Ends -->
+    <div class="logout-btn">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="img/logout-icon.png" alt="Logout" /> logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Sidebar Section Ends -->
+  <!-- Main Content Section Starts -->
+  <div class="main-content">
+    <div class="past-live-streams">
+      <div class="past-live-streams-header">
+        <div class="streams-btns">
+          <button class="past-ongoing-stream-link active" onclick="openCity(event, 'PastLiveStreams')">Past <span>Live Streams</span></button>
+          <button class="past-ongoing-stream-link" onclick="openCity(event, 'OngoingStreams')">Ongoing <span>Streams</span></button>
+        </div>
+        <div class="join-as-guest-btn">
+          <button id="joinAsGuestModalBtn"><span>join as</span> guest</button>
+        </div>
+      </div>
+      <div class="past-streams-items" id="PastLiveStreams" style="display: block;">
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+        </div>
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img-2.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+        </div>
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img-3.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+        </div>
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+        </div>
+      </div>
+      <div class="past-streams-items" id="OngoingStreams">
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+          <div class="stream-join-btn">
+            <button id="liveStreamModalJoinBtn">join</button>
+          </div>
+        </div>
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+          <div class="stream-join-btn">
+            <button>join</button>
+          </div>
+        </div>
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+          <div class="stream-join-btn">
+            <button>join</button>
+          </div>
+        </div>
+        <div class="streams-item">
+          <div class="video">
+            <a href="#">
+              <img src="img/video-img.png" alt="Video Thumbnail" />
+              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
+            </a>
+          </div>
+          <div class="stream-detail">
+            <div class="stream-title">
+              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+            </div>
+            <div class="views-upload-time">
+              <p class="views-text">20 Views</p>
+              <p class="upload-time-text">3 Hours Ago</p>
+            </div>
+            <div class="stream-viewers">
+              <p>
+                <img src="img/viewer-img-1.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
+                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
+                +16 Others have viewed your Live Stream.
+              </p>
+            </div>
+            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          </div>
+          <div class="stream-join-btn">
+            <button>join</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Main Content Section Ends -->
+</div>
+<!-- Sidebar and Content Section Ends -->
+
+<!-- Mobile Sidebar Section Starts -->
+<div id="mobileSidebar" class="mobileSidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+  <!-- User Section Starts -->
+  <div class="user-info-dropdown-cont">
+    <div class="user-info-cont">
+      <img class="user-img" src="img/user-profile.png" alt="User Image" />
+      <div class="name-type-cont">
+        <p class="name">Gavano</p>
+        <p class="type">Subscriber</p>
+      </div>
+    </div>
+    <div class="user-dropdown-cont">
+      <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+        <img src="img/more-square.png" alt="More Info Icon" />
+      </button>
+      <div id="more-info-dropdown-content" class="dropdown-content">
+        <ul class="more-links">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- User Section Ends -->
+  <!-- Sidebar Links Section Starts -->
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="dashboard.html" class="active">
+          <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
+          <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
+          dashboard
+        </a>
+      </li>
+      <li>
+        <a href="communications.html">
+          <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+          <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+          communications
+        </a>
+      </li>
+      <li>
+        <a href="applications.html">
+          <img class="dark-icon" src="img/user-icon-square.png" alt="User Icon" />
+          <img class="light-icon" src="img/user-icon-square.png" alt="User Icon" />
+          applications
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="divider"></div>
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="profile.html">
+          <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+          <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+          profile
+        </a>
+      </li>
+      <li>
+        <a href="setting.html">
+          <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          setting
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Sidebar Links Section Ends -->
+  <div class="logout-btn">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="img/logout-icon.png" alt="Logout" /> logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Mobile Sidebar Section Ends -->
+
+<!-- Join As Guest Modal -->
+<div id="joinAsGuestModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Join as Guest</h1>
+    </div>
+    <div class="modal-content-body">
+      <p class="modal-content-body-text">Paste the link Here. To Join Live</p>
+      <p class="modal-content-body-text">Streaming as a Guest</p>
+      <div class="paste-stream-link">
+        <form action="">
+          <input type="text" placeholder="Paste Link Here" />
+          <div class="login-register-btns">
+            <button id="joinAsGuestJoinBtn" type="button" class="active">Join</button>
+            <button id="joinAsGuestCancelInviteBtn" type="button">Cancel Invite</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modals Section Ends -->
+
+<!-- Join As Guest Modal -->
+<div id="liveStreamPermissionModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Permission..!</h1>
+    </div>
+    <div class="modal-content-body">
+      <div class="success-img">
+        <img src="img/bell.png" alt="Permission" />
+      </div>
+      <p class="modal-content-body-text">Do you Want to Start Live Stream ?</p>
+      <p class="modal-content-body-text">Click Start to Go Live. If Not Press the Other Button to Cancel.</p>
+      <form action="">
+        <div class="login-register-btns">
+          <button id="liveStreamPermissionModalStartBtn" type="button" class="active">Start Now</button>
+          <button id="liveStreamPermissionModalNotNowBtn" type="button">Not Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Modals Section Ends -->
+
+  <script src="js/main.js"></script>
+  <script>
+    function showUserMoreInfoDropdown() {
+      var moreInfoDropdownContent = document.getElementById("more-info-dropdown-content");
+      moreInfoDropdownContent.classList.toggle("active");
+    }
+  </script>
+  <script>
+    function openSidebar() {
+      document.getElementById("mobileSidebar").style.width = "80%";
+      document.getElementById("main").style.marginLeft = "80%";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeSidebar() {
+      document.getElementById("mobileSidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+  <script>
+    function openCity(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("past-streams-items");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("past-ongoing-stream-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+  <script>
+    // Get the modal
+    var joinAsGuestModal = document.getElementById("joinAsGuestModal");
+    var liveStreamPermissionModal = document.getElementById("liveStreamPermissionModal");
+
+    // Get the button that opens the modal
+    var joinAsGuestModalBtn = document.getElementById("joinAsGuestModalBtn");
+    var joinAsGuestCancelInviteBtn = document.getElementById("joinAsGuestCancelInviteBtn");
+    var joinAsGuestJoinBtn = document.getElementById("joinAsGuestJoinBtn");
+    var liveStreamModalJoinBtn = document.getElementById("liveStreamModalJoinBtn");
+    var liveStreamPermissionModalNotNowBtn = document.getElementById("liveStreamPermissionModalNotNowBtn");
+    var liveStreamPermissionModalStartBtn = document.getElementById("liveStreamPermissionModalStartBtn");
+
+
+    // When the user clicks the button, open the modal 
+    joinAsGuestModalBtn.onclick = function() {
+      joinAsGuestModal.style.display = "block";
+    }
+    joinAsGuestCancelInviteBtn.onclick = function() {
+      joinAsGuestModal.style.display = "none";
+    }
+    joinAsGuestJoinBtn.onclick = function() {
+      joinAsGuestModal.style.display = "none";
+      window.location.replace("join-as-guest.html");
+    }
+    liveStreamModalJoinBtn.onclick = function() {
+      liveStreamPermissionModal.style.display = "block";
+    }
+    liveStreamPermissionModalNotNowBtn.onclick = function() {
+      liveStreamPermissionModal.style.display = "none";
+    }
+    liveStreamPermissionModalStartBtn.onclick = function() {
+      liveStreamPermissionModal.style.display = "none";
+      window.location.replace("live-stream.html");
+    }
+  </script>
+y</body>
+</head>
