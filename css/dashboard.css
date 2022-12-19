@@ -139,7 +139,8 @@ Header Styles
 	margin-right: 30px;
 	transition: all .3s ease;
 }
-.header .search-bar-notification .notification .stream-btn:hover{
+.header .search-bar-notification .notification .stream-btn:hover,
+.header .search-bar-notification .notification .stream-btn.active{
 	background-color: var(--color-2);
 	color: #ffffff;
 }
@@ -735,6 +736,216 @@ Main Content Styles
 	font-weight: 400;
 }
 
+/*--------------------------------------
+Live Stream Page Styles
+---------------------------------------*/
+.main-content .live-stream{
+	width: 100%;
+	height: 700px;
+	padding: 0 20px;
+}
+.main-content .live-stream .live-stream-heading{
+	font-size: 40px;
+	text-align: center;
+	color: var(--color-3);
+	margin: 30px 0;
+	font-weight: 600;
+}
+.main-content .live-stream .live-stream-video-comments{
+	width: 100%;
+	background: #FDFDFF;
+	border: 4.33px solid #E1E2FF;
+	border-radius: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-video{
+	width: 70%;
+	height: 100%;
+	padding: 5px;
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-video img{
+	width: 100%;
+	height: 100%;
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-comments{
+	width: 30%;
+	height: 100%;
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-comments .header{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	background: #FFFFFF;
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #DFE0EB;
+	border-radius: 0px 10px 0px 0px;
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .live-chat-btn{
+	background: #D20000;
+	border-radius: 4.39635px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #ffffff;
+	text-transform: capitalize;
+	padding: 5px 10px;
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .viewers{
+	margin-left: 20px;
+	font-size: 15px;
+	font-weight: 500;
+	color: var(--color-3);
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .viewers img{
+	vertical-align: middle;
+	width: 15px;
+	margin-left: 5px;
+}
+.main-content .live-stream .live-stream-video-comments .live-stream-comments .comments-body{
+	width: 100%;
+	background: #FFFFFF;
+	border-left: 1px solid #DFE0EB;
+	border-radius: 0px 7px 7px 0px;
+	padding: 0 10px 10px 10px;
+	
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
+	width: 100%;
+	height: 370px;
+	overflow: hidden;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item{
+	padding: 5px 10px;
+	width: 100%;
+	background: #FFFFFF;
+	border: 0.5px solid #DBD2FB;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-img{
+	width: 40px;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-img img{
+	width: 100%;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text{
+	width: 70%;
+	word-break: break-all;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text .comments-item-text-name{
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--color-3);
+	text-transform: capitalize;
+	margin-bottom: 2px;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text .comments-item-text-name span{
+	font-size: 8px;
+	font-weight: 400;
+	margin-left: 5px;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text .comments-item-text-description{
+	font-size: 10px;
+	font-weight: 400;
+	color: #7B7B7B;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer{
+	width: 100%;
+	height: 40px;
+	background: #FFFFFF;
+	border: 0.574848px solid #A5A6F6;
+	border-radius: 5.74848px;
+	margin-top: 10px;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer form{
+	display: flex;
+	align-items: center;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
+	width: 200px;
+	height: 40px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	padding-left: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #A0A0A0;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message::placeholder{
+	font-size: 14px;
+	font-weight: 500;
+	color: #A0A0A0;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .send-msg-btn{
+	background-color: var(--color-2);
+	border-radius: 5.74848px;
+	padding: 3px 3px 2px 5px;
+	padding-right: 5px;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .upload{
+	width: fit-content;
+	margin-left: 10px;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .upload label {
+	 cursor: pointer;
+}
+.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .upload label input {
+	 display: none;
+	 width: 50px;
+}
+.live-stream .end-watching-btn{
+	text-align: center;
+	margin-top: 50px;
+}
+.live-stream .end-watching-btn a{
+	padding: 15px 50px;
+	background: #D20000;
+	border: 1.28023px solid #D23A83;
+	border-radius: 6.40114px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.live-stream .live-stream-controls{
+	width: 65%;
+	margin: 50px auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+.live-stream .live-stream-controls button{
+	width: 60px;
+	height: 60px;
+	background: #FFFFFF;
+	border-radius: 50%;
+	box-shadow: 0px 0px 9.90783px rgba(0, 0, 0, 0.25);
+}
+.live-stream .live-stream-controls button img{
+	vertical-align: middle;
+	width: 30px;
+}
+.live-stream .live-stream-controls .finish-stream-btn{
+	padding: 15px 50px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #D20000;
+	text-transform: capitalize;
+	border: 1.33px solid #D20000;
+	border-radius: 5px;
+	transition: all .3s ease;
+}
+.live-stream .live-stream-controls .finish-stream-btn:hover{
+	background-color: #D20000;
+	color: #ffffff;
+}
+
 
 /*--------------------------------------
 Register and Login Pages Modals Styles
@@ -1061,6 +1272,49 @@ Styles For Responsiveness
 		width: 100%;
 	}
 
+	.main-content .live-stream .live-stream-heading{
+		font-size: 20px;
+	}
+	.main-content .live-stream{
+		padding: 0 10px;
+	}
+	.main-content .live-stream .live-stream-video-comments .live-stream-video{
+		width: 100%;
+	}
+	.main-content .live-stream .live-stream-video-comments .live-stream-comments{
+		width: 100%;
+	}
+	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
+		height: 220px;
+		overflow: auto;
+	}
+	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
+		width: 80%;
+	}
+	.live-stream .live-stream-controls{
+		width: 95%;
+		margin-top: 20px;
+		padding-bottom: 50px;
+		align-items: center;
+	}
+	.live-stream .live-stream-controls button{
+		width: 30px;
+		height: 30px;
+	}
+	.live-stream .live-stream-controls button img{
+		width: 15px;
+	}
+	.live-stream .live-stream-controls .finish-stream-btn{
+		padding: 10px 20px;
+		font-size: 18px;
+	}
+	.live-stream .end-watching-btn{
+		padding-bottom: 50px;
+	}
+	.live-stream .end-watching-btn a{
+		font-size: 18px;
+	}
+
 	.modal-content{
 		width: 90%;
 	}
@@ -1152,6 +1406,26 @@ Styles For Responsiveness
 		margin-top: 10px;
 	}
 
+	.main-content .live-stream .live-stream-heading{
+		font-size: 30px;
+	}
+	.main-content .live-stream .live-stream-video-comments .live-stream-video{
+		width: 65%;
+	}
+	.main-content .live-stream .live-stream-video-comments .live-stream-comments{
+		width: 35%;
+	}
+	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
+		height: 220px;
+		overflow: auto;
+	}
+	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
+		width: 70%;
+	}
+	.live-stream .live-stream-controls{
+		width: 75%;
+	}
+
 	.modal{
 		padding-top: 100px;
 	}
@@ -1232,6 +1506,26 @@ Styles For Responsiveness
 		width: 100%;
 		text-align: center;
 		margin-top: 10px;
+	}
+
+	.main-content .live-stream .live-stream-heading{
+		font-size: 30px;
+	}
+	.main-content .live-stream .live-stream-video-comments .live-stream-video{
+		width: 65%;
+	}
+	.main-content .live-stream .live-stream-video-comments .live-stream-comments{
+		width: 35%;
+	}
+	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
+		height: 220px;
+		overflow: auto;
+	}
+	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
+		width: 70%;
+	}
+	.live-stream .live-stream-controls{
+		width: 75%;
 	}
 
 	.modal{
