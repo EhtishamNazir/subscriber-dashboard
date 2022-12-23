@@ -383,13 +383,16 @@ Sidebar Links Styles
 	position: relative;
 	width: 100%;
 	display: block;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	color: #0C0C0D;
 	padding: 15px 0;
+	padding-right: 10px;
 	text-transform: capitalize;
 	transition: all .3s ease;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 .sidebar-main-content .sidebar .sidebar-links ul li a:hover,
 .sidebar-main-content .sidebar .sidebar-links ul li a.active{
@@ -414,12 +417,13 @@ Sidebar Links Styles
 	margin-right: 10px;
 	margin-left: 30px;
 	width: 30px;
+	height: auto;
 }
 .sidebar-main-content .sidebar .sidebar-links ul li a .light-icon{
 	display: none;
 }
 .sidebar-main-content .sidebar .sidebar-links ul li a.active .light-icon{
-	display: inline-block;
+	display: block;
 }
 .sidebar-main-content .sidebar .sidebar-links ul li a.active .dark-icon{
 	display: none;
@@ -529,6 +533,7 @@ Mobile Sidebar Styles
 	font-size: 14px;
 	font-weight: 400;
 	color: rgba(255, 255, 255, 0.5);
+	text-transform: capitalize;
 }
 .mobileSidebar .user-info-dropdown-cont .user-dropdown-cont{
 	position: relative;
@@ -686,393 +691,264 @@ Mobile Sidebar Styles
   padding: 16px;
 }
 
-/*--------------------------------------
+/*--------------------
 Main Content Styles
----------------------------------------*/
+---------------------*/
 .sidebar-main-content .main-content{
 	width: 80%;
 	height: 800px;
 }
-.main-content .past-live-streams{
-	width: 100%;
-}
-.main-content .past-live-streams .past-live-streams-header{
-	width: 100%;
+/*--------------------------------------
+Subscriber's Reports Page Styles
+---------------------------------------*/
+.sidebar-main-content .main-content .welcome-admin{
+	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	padding: 25px 20px;
-}
-.main-content .past-live-streams .past-live-streams-header .streams-btns{
-	width: 50%;
-	padding: 5px;
-	background: #FFFFFF;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 5px;
-	display: flex;
-	flex-wrap: wrap;
+	padding: 20px;
 	justify-content: space-between;
 }
-.main-content .past-live-streams .past-live-streams-header .streams-btns button{
-	padding: 10px 0;
-	width: 48%;
-	font-size: 22px;
-	font-weight: 400;
-	color: var(--color-3);
-	transition: all .5s ease;
-	border-radius: 5px;
-	text-transform: capitalize;
-}
-.main-content .past-live-streams .past-live-streams-header .streams-btns button:hover,
-.main-content .past-live-streams .past-live-streams-header .streams-btns button.active{
-	font-weight: 600;
-	color: #ffffff;
-	background-color: var(--color-2);
-}
-.main-content .past-live-streams .past-live-streams-header .join-as-guest-btn button{
-	font-size: 20px;
+.sidebar-main-content .main-content .welcome-admin .welcome-text-date .welcome-text{
+	font-size: 24px;
 	font-weight: 500;
-	color: #ffffff;
-	background: #45308A;
-	border-radius: 5px;
 	text-transform: capitalize;
-	padding: 12px 30px;
+	color: #000000;
+	margin-bottom: 5px;
 }
-.main-content .past-live-streams .past-streams-items{
-	width: 95%;
-	height: 680px;
-	margin: auto;
-	overflow: auto;
+.sidebar-main-content .main-content .welcome-admin .welcome-text-date .date,
+.sidebar-main-content .main-content .welcome-admin .time p{
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: capitalize;
+	color: #000000;
+}
+.sidebar-main-content .main-content .report-btns{
+	width: 68%;
+	padding: 0 0 20px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.sidebar-main-content .main-content .report-btns .report-btn-link{
+	width: 30%;
+	padding: 17px 0;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--color-3);
+	text-transform: capitalize;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 3.84px rgba(0, 0, 0, 0.33);
+	border-radius: 10px;
+	transition: all .3s ease;
+}
+.sidebar-main-content .main-content .report-btns .report-btn-link:hover,
+.sidebar-main-content .main-content .report-btns .report-btn-link.active{
+	color: #ffffff;
+	background: var(--color-2);
+	box-shadow: 2px 2px 10.84px rgba(0, 0, 0, 0.33);
+	border-radius: 10px;
+}
+.sidebar-main-content .main-content .report-data{
+	width: 100%;
+	padding: 0 20px;
 	display: none;
 }
-.main-content .past-live-streams .streams-item{
+.sidebar-main-content .main-content .report-data.active{
+	display: block;
+}
+.sidebar-main-content .main-content .report-data .report-data-header{
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
-	padding: 0 20px;
-	margin-bottom: 30px;
+	padding: 15px 30px;
+	background: #ffffff;
+	border-bottom: 1.24884px solid #DFE0EB;
+	border-radius: 17.4838px 17.4838px 0px 0px;
 }
-.main-content .past-live-streams .streams-item .video{
-	position: relative;
-	width: 30%;
-	height: 210px;
-}
-.main-content .past-live-streams .streams-item .video img{
-	width: 100%;
-	height: 100%;
-}
-.main-content .past-live-streams .streams-item .video .video-play-btn{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 8.6029px;
-	border: none;
-	outline: none;
-}
-.main-content .past-live-streams .streams-item .video .video-play-btn img{
-	width: 30px;
-	height: auto;
-}
-.main-content .past-live-streams .streams-item .stream-detail{
-	width: 50%;
-	padding-left: 20px;
-/*	word-break: break-all;*/
-}
-.main-content .past-live-streams .streams-item .stream-detail .stream-title p{
-	font-size: 18px;
-	font-weight: 700;
-	color: var(--color-3);
-}
-.main-content .past-live-streams .streams-item .stream-detail .views-upload-time{
-	margin: 15px 0;
-	display: flex;
-	flex-wrap: wrap;
-}
-.main-content .past-live-streams .streams-item .stream-detail .views-upload-time .views-text,
-.main-content .past-live-streams .streams-item .stream-detail .views-upload-time .upload-time-text{
-	font-size: 16px;
-	font-weight: 400;
-	color: #AFAFAF;
-	text-transform: capitalize;
-}
-.main-content .past-live-streams .streams-item .stream-detail .views-upload-time .upload-time-text{
-	margin-left: 40px;
-}
-.main-content .past-live-streams .streams-item .stream-detail .stream-viewers{
-	margin-bottom: 15px;
-}
-.main-content .past-live-streams .streams-item .stream-detail .stream-viewers p{
-	font-size: 16px;
-	font-weight: 400;
-	color: var(--color-3);
-}
-.main-content .past-live-streams .streams-item .stream-detail .stream-viewers img{
-	vertical-align: middle;
-	width: 40px;
-	height: 40px;
-}
-.main-content .past-live-streams .streams-item .stream-detail .stream-viewers .viewer-img{
-	margin-left: -25px;
-}
-.main-content .past-live-streams .streams-item .stream-detail .stream-detail-description{
-	font-size: 16px;
-	color: #000000;
-	font-weight: 300;
-}
-.main-content .past-live-streams .streams-item .stream-join-btn button{
+.sidebar-main-content .main-content .report-data .report-data-header .report-data-header-title{
 	font-size: 20px;
-	font-weight: 600;
-	color: #ffffff;
+	font-weight: 500;
+	color: var(--color-3);
 	text-transform: capitalize;
-	background-color: var(--color-2);
-	border: 1px solid var(--color-2);
-	border-radius: 5px;
-	padding: 10px 40px;
-	transition: all .3s ease;
 }
-.main-content .past-live-streams .streams-item .stream-join-btn button:hover{
-	background-color: transparent;
-	color: var(--color-3);
-	font-weight: 400;
+.sidebar-main-content .main-content .report-data .report-data-header .filter-btns span{
+	font-size: 16px;
+	font-weight: 500;
+	color: #989898;
+	text-transform: capitalize;
+	margin-right: 20px;
 }
-
-/*--------------------------------------
-Live Stream Page Styles
----------------------------------------*/
-.main-content .live-stream{
+.sidebar-main-content .main-content .report-data .report-data-header .filter-btns button{
+	font-size: 16px;
+	font-weight: 500;
+	color: #989898;
+	text-transform: capitalize;
+	margin-left: 20px;
+}
+.sidebar-main-content .main-content .report-data .report-data-header .filter-btns button img{
+	vertical-align: middle;
+}
+.sidebar-main-content .main-content .report-data .responsive-table{
 	width: 100%;
-	height: 700px;
-	padding: 0 20px;
+	overflow-x: auto;
 }
-.main-content .live-stream .live-stream-heading{
-	font-size: 40px;
+.sidebar-main-content .main-content .report-data table{
+	width: 100%;
+	margin-bottom: 50px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 4.79918px rgba(0, 0, 0, 0.25);
+	border-radius: 17.4838px;
+}
+.sidebar-main-content .main-content .report-data table,
+.sidebar-main-content .main-content .report-data table th,
+.sidebar-main-content .main-content .report-data table td{
+	border-collapse: collapse;
+}
+.sidebar-main-content .main-content .report-data table th{
+	padding: 15px 10px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000000;
+	text-transform: capitalize;
+	background: #FBFBFB;
+	border-bottom: 1.24884px solid #DFE0EB;
+}
+.sidebar-main-content .main-content .report-data table th.color-2{
+	color: var(--color-2);
+	font-size: 15px;
+}
+.sidebar-main-content .main-content .report-data table td{
+	font-size: 14px;
+	font-weight: 500;
+	color: #000000;
 	text-align: center;
-	color: var(--color-3);
-	margin: 30px 0;
-	font-weight: 600;
+	padding: 10px 0;
+	text-transform: capitalize;
+	background: #ffffff;
+	border: 1px solid #ffffff;
 }
-.main-content .live-stream .live-stream-video-comments{
+.sidebar-main-content .main-content .report-data table td.active-text{
+	color: #00B027;
+}
+.sidebar-main-content .main-content .report-data table td.primary-text{
+	color: #1877F2;
+}
+.sidebar-main-content .main-content .report-data table td img{
+	vertical-align: middle;
+}
+.sidebar-main-content .main-content .report-data .report-data-graphs{
 	width: 100%;
-	background: #FDFDFF;
-	border: 4.33px solid #E1E2FF;
-	border-radius: 10px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 20px;
 }
-.main-content .live-stream .live-stream-video-comments .live-stream-video{
-	width: 70%;
-	height: 100%;
-	padding: 5px;
-}
-.main-content .live-stream .live-stream-video-comments .live-stream-video img{
-	width: 100%;
-	height: 100%;
-}
-.main-content .live-stream .live-stream-video-comments .live-stream-comments{
-	width: 30%;
-	height: 100%;
-}
-.main-content .live-stream .live-stream-video-comments .live-stream-comments .header{
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	width: 100%;
+.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graph-item{
+	width: 35%;
 	padding: 10px;
 	background: #FFFFFF;
-	border-width: 0px 0px 1px 1px;
-	border-style: solid;
-	border-color: #DFE0EB;
-	border-radius: 0px 10px 0px 0px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
 }
-.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .live-chat-btn{
-	background: #D20000;
-	border-radius: 4.39635px;
-	font-size: 16px;
-	font-weight: 500;
+.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graph-item img{
+	width: 100%;
+}
+.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data-cont{
+	width: 25%;
+	background: var(--color-2);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 15.2941px;
+}
+.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data-cont .total-sales-data{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data .total-sales-data-title{
+	font-size: 20px;
+	font-weight: 700;
 	color: #ffffff;
+	padding: 15px 20px;
 	text-transform: capitalize;
-	padding: 5px 10px;
 }
-.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .viewers{
-	margin-left: 20px;
-	font-size: 15px;
-	font-weight: 500;
-	color: var(--color-3);
-}
-.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .viewers img{
-	vertical-align: middle;
-	width: 15px;
-	margin-left: 5px;
-}
-.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .invite-btn{
+.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data .revenue-generated{
+	width: 100%;
 	position: absolute;
-	right: 10px;
-	padding: 5px 20px;
-	font-size: 14px;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data .revenue-generated p{
+	font-size: 16px;
 	font-weight: 400;
-	text-transform: capitalize;
-	color: var(--color-3);
-	border: 0.947375px solid var(--color-3);
-	border-radius: 4.73688px;
-	transition: all .3s ease;
-}
-.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .invite-btn:hover{
-	border-color: var(--color-2);
-	background-color: var(--color-2);
 	color: #ffffff;
+	text-transform: capitalize;
 }
-.main-content .live-stream .live-stream-video-comments .live-stream-comments .comments-body{
+.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data .revenue-generated .amount{
+	font-size: 30px;
+	font-weight: 400;
+	color: #ffffff;
+	margin-top: 5px;
+}
+.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graphs-footer{
 	width: 100%;
+	position: absolute;
+	bottom: 0;
 	background: #FFFFFF;
-	border-left: 1px solid #DFE0EB;
-	border-radius: 0px 7px 7px 0px;
-	padding: 0 10px 10px 10px;
-	
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
-	width: 100%;
-	height: 370px;
-	overflow: hidden;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item{
-	padding: 5px 10px;
-	width: 100%;
-	background: #FFFFFF;
-	border: 0.5px solid #DBD2FB;
-	border-radius: 5px;
-	margin-bottom: 10px;
+	padding: 20px;
+	border-radius: 15.2941px;
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-img{
-	width: 40px;
+.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graphs-footer .footer-item{
+	width: 50%;
 }
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-img img{
-	width: 100%;
+.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graphs-footer .footer-item p{
+	font-size: 14px;
+	font-weight: 400;
+	color: #4E5969;
+	text-transform: capitalize;
 }
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text{
-	width: 70%;
-	word-break: break-all;
+.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graphs-footer .footer-item .amount{
+	font-size: 16px;
+	font-weight: 500;
+	margin-top: 5px;
 }
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text .comments-item-text-name{
-	font-size: 12px;
-	font-weight: 600;
+
+
+/*--------------------------------------
+Subscriber Communications Page Styles
+---------------------------------------*/
+.sidebar-main-content .main-content .subs-communications-btns{
+	width: 40%;
+	padding: 0 0 20px 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.sidebar-main-content .main-content .subs-communications-btns .subs-communications-btn-link{
+	width: 45%;
+	padding: 17px 0;
+	font-size: 18px;
+	font-weight: 500;
 	color: var(--color-3);
 	text-transform: capitalize;
-	margin-bottom: 2px;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text .comments-item-text-name span{
-	font-size: 8px;
-	font-weight: 400;
-	margin-left: 5px;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-item .comments-item-text .comments-item-text-description{
-	font-size: 10px;
-	font-weight: 400;
-	color: #7B7B7B;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer{
-	width: 100%;
-	height: 40px;
 	background: #FFFFFF;
-	border: 0.574848px solid #A5A6F6;
-	border-radius: 5.74848px;
-	margin-top: 10px;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer form{
-	display: flex;
-	align-items: center;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
-	width: 200px;
-	height: 40px;
-	border: none;
-	outline: none;
-	background-color: transparent;
-	padding-left: 10px;
-	font-size: 14px;
-	font-weight: 500;
-	color: #A0A0A0;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message::placeholder{
-	font-size: 14px;
-	font-weight: 500;
-	color: #A0A0A0;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .send-msg-btn{
-	background-color: var(--color-2);
-	border-radius: 5.74848px;
-	padding: 3px 3px 2px 5px;
-	padding-right: 5px;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .upload{
-	width: fit-content;
-	margin-left: 10px;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .upload label {
-	 cursor: pointer;
-}
-.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .upload label input {
-	 display: none;
-	 width: 50px;
-}
-.live-stream .end-watching-btn{
-	text-align: center;
-	margin-top: 50px;
-}
-.live-stream .end-watching-btn a{
-	padding: 15px 50px;
-	background: #D20000;
-	border: 1.28023px solid #D23A83;
-	border-radius: 6.40114px;
-	font-size: 20px;
-	font-weight: 600;
-	color: #ffffff;
-	text-transform: capitalize;
-}
-.live-stream .live-stream-controls{
-	width: 65%;
-	margin: 50px auto;
-	display: flex;
-	justify-content: space-evenly;
-}
-.live-stream .live-stream-controls button{
-	width: 60px;
-	height: 60px;
-	background: #FFFFFF;
-	border-radius: 50%;
-	box-shadow: 0px 0px 9.90783px rgba(0, 0, 0, 0.25);
-}
-.live-stream .live-stream-controls button img{
-	vertical-align: middle;
-	width: 30px;
-}
-.live-stream .live-stream-controls .finish-stream-btn{
-	padding: 15px 50px;
-	font-size: 20px;
-	font-weight: 600;
-	color: #D20000;
-	text-transform: capitalize;
-	border: 1.33px solid #D20000;
-	border-radius: 5px;
+	box-shadow: 0px 0px 3.84px rgba(0, 0, 0, 0.33);
+	border-radius: 10px;
 	transition: all .3s ease;
 }
-.live-stream .live-stream-controls .finish-stream-btn:hover{
-	background-color: #D20000;
+.sidebar-main-content .main-content .subs-communications-btns .subs-communications-btn-link:hover,
+.sidebar-main-content .main-content .subs-communications-btns .subs-communications-btn-link.active{
 	color: #ffffff;
+	background: var(--color-2);
+	box-shadow: 2px 2px 10.84px rgba(0, 0, 0, 0.33);
+	border-radius: 10px;
 }
-
-
-/*-------------------------
-Communication Page Styles
--------------------------*/
 .main-content .communications{
 	width: 100%;
 	display: flex;
@@ -1346,6 +1222,11 @@ Communication Page Styles
 	vertical-align: middle;
 	width: 14px;
 }
+.main-content .communications .inbox .inbox-body .inbox-body-messages .news-letter-images img{
+	display: block;
+	width: 80%;
+	margin: 10px auto;
+}
 .main-content .communications .inbox .inbox-body .inbox-footer{
 	width: 100%;
 	height: 50px;
@@ -1445,282 +1326,6 @@ Communication Page Styles
 .main-content .communications .inbox .calling-controls button.main-btn img{
 	width: 30px;
 }
-
-
-
-/*--------------------------------------
-Profile Page Styles
----------------------------------------*/
-.main-content .user-profile{
-	width: 100%;
-}
-.main-content .user-profile .user-profile-header{
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	padding: 25px 20px;
-}
-.main-content .user-profile .user-profile-header .profile-info-btns{
-	width: 40%;
-	padding: 5px;
-	background: #FFFFFF;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 5px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.main-content .user-profile .user-profile-header .profile-info-btns button{
-	padding: 10px 0;
-	width: 49%;
-	font-size: 20px;
-	font-weight: 400;
-	color: var(--color-3);
-	transition: all .5s ease;
-	border-radius: 5px;
-	text-transform: capitalize;
-}
-.main-content .user-profile .user-profile-header .profile-info-btns button:hover,
-.main-content .user-profile .user-profile-header .profile-info-btns button.active{
-	font-weight: 600;
-	color: #ffffff;
-	background-color: var(--color-2);
-}
-.main-content .user-profile .user-profile-body{
-	display: none;
-	width: 100%;
-	padding: 20px 30px;
-}
-.main-content .user-profile .user-profile-body .user-profile-data{
-	width: 80%;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-img{
-	width: 150px;
-	position: relative;
-	margin: auto;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-img img{
-	width: 100%;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-img .upload{
-	width: fit-content;
-	margin-left: 10px;
-	position: absolute;
-	right: 15px;
-	bottom: 0px;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-img .upload label {
-	 cursor: pointer;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-img .upload label input {
-	 display: none;
-	 width: 50px;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-img .upload label .upload-button img{
-	width: 30px;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-name{
-	text-align: center;
-	margin: 10px 0;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-name p{
-	font-size: 30px;
-	font-weight: 700;
-	color: var(--color-3);
-	text-transform: capitalize;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-name p span{
-	font-size: 18px;
-	font-weight: 400;
-	color: #A4A4A4;
-	margin-left: 10px;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form{
-	width: 80%;
-	margin: 30px auto;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: 20px;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont .form-group-half{
-	width: 45%;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-cont{
-	width: 100%;
-	margin-bottom: 20px;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont .form-group-half label,
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-cont label{
-	display: block;
-	font-size: 20px;
-	font-weight: 400;
-	color: var(--color-3);
-	margin-bottom: 10px;
-	text-transform: capitalize;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont .form-group-half .cust-form-control,
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-cont .cust-form-control{
-	width: 100%;
-	height: 50px;
-	background: rgba(186, 240, 196, 0.1);
-	border: 1px solid #000821;
-	border-radius: 5px;
-	padding: 0  15px;
-	font-size: 20px;
-	font-weight: 700;
-	color: var(--color-3);
-	text-transform: capitalize;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-cont .cust-form-control{
-	text-transform: none;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .update-profile-btn{
-	text-align: center;
-	margin-top: 40px;
-}
-.user-profile .user-profile-body .user-profile-data .user-profile-form .update-profile-btn button{
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	text-transform: capitalize;
-	padding: 15px 30px;
-	background: var(--color-2);
-	border-radius: 6.40114px;
-}
-.user-profile .user-profile-body .pricing-plan-items{
-	width: 100%;
-	margin: 0 auto 50px auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item{
-	width: 90%;
-	background: #FFFFFF;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
-	margin: auto;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-header{
-	width: 100%;
-	background: #FB7B05;
-	padding: 15px 0;
-	border-radius: 10px 10px 0px 0px;
-}
-.user-profile .user-profile-body .pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-header{
-	background-color: #1877F2;
-}
-.user-profile .user-profile-body .pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-header{
-	background-color: #D23A83;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-header .plan-name{
-	text-align: center;
-	font-size: 34px;
-	color: #ffffff;
-	font-weight: 500;
-	text-transform: capitalize;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body{
-	padding: 30px 20px;
-	width: 90%;
-	margin: auto;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-price{
-	font-size: 34px;
-	font-weight: 400;
-	color: #FB7B05;
-	text-align: center;
-	margin-bottom: 10px;
-	text-transform: capitalize;
-}
-.user-profile .user-profile-body .pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-body .plan-price{
-	color: #1877F2;
-}
-.user-profile .user-profile-body .pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-body .plan-price{
-	color: #D23A83;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-price span{
-	font-size: 24px;
-	color: #BDBDBD;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description{
-	padding: 10px 0 20px 0;
-	text-align: center;
-	border-bottom: 1px solid #BDBDBD;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description p{
-	font-size: 20px;
-	font-weight: 300;
-	padding: 0 30px;
-	color: var(--color-3);
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features{
-	width: 80%;
-	margin: auto;
-	padding: 30px 0 20px 0;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li{
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 20px;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .tick-circle{
-/*	width: 10%;*/
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li img{
-	width: 25px;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .text{
-	width: 90%;
-	margin-left: 20px;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li span{
-	font-size: 16px;
-	font-weight: 300;
-	color: var(--color-3);
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn{
-	width: 50%;
-	margin: auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn button{
-	width: 45%;
-	font-size: 17px;
-	font-weight: 600;
-	color: var(--color-3);
-	background-color: transparent;
-	border: 1px solid var(--color-3);
-	border-radius: 6.07314px;
-	text-transform: capitalize;
-	padding: 15px 0;
-	cursor: pointer;
-	transition: all 0.5s ease;
-}
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn button.active,
-.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn button:hover{
-	color: #ffffff;
-	background: #FB7B05;
-	border-color: #FB7B05;
-}
-.user-profile .user-profile-body .pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button.active,
-.user-profile .user-profile-body .pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button:hover{
-	background: #1877F2;
-	border-color: #1877F2;
-}
-.user-profile .user-profile-body .pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button.active,
-.user-profile .user-profile-body .pricing-plan-items .premium-plan.pricing-plan-item .pricing-plan-item-body .subscribe-btn button:hover{
-	background: var(--color-2);
-	border-color: var(--color-2);
-}
-
 
 /*--------------------------------------
 Register and Login Pages Modals Styles
@@ -2280,92 +1885,39 @@ Styles For Responsiveness
 	.sidebar-main-content .main-content{
 		width: 100%;
 	}
-	.main-content .past-live-streams .past-live-streams-header{
-		padding: 10px;
+
+	.sidebar-main-content .main-content .welcome-admin .welcome-text-date{
+		width: 100%;
 	}
-	.main-content .past-live-streams .past-live-streams-header .streams-btns{
-		width: 55%;
+	.sidebar-main-content .main-content .report-btns{
+		width: 100%;
+		padding: 0 20px 20px 20px;
 	}
-	.main-content .past-live-streams .past-live-streams-header .streams-btns button,
-	.main-content .past-live-streams .past-live-streams-header .join-as-guest-btn button{
-		font-size: 16px;
+	.sidebar-main-content .main-content .report-btns .report-btn-link{
+		font-size: 14px;
 	}
-	.main-content .past-live-streams .past-live-streams-header .streams-btns button span,
-	.main-content .past-live-streams .past-live-streams-header .join-as-guest-btn button span{
+	.sidebar-main-content .main-content .report-btns .report-btn-link span{
 		display: none;
 	}
-
-	.main-content .past-live-streams .past-streams-items{
+	.sidebar-main-content .main-content .report-data .report-data-header{
+		padding: 10px 15px;
+	}
+	.sidebar-main-content .main-content .report-data .report-data-header .filter-btns{
+		display: none;
+	}
+	.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data-cont{
 		width: 100%;
-		height: auto;
+		height: 250px;
 	}
-	.main-content .past-live-streams .streams-item{
-		padding: 0 10px;
-	}
-	.main-content .past-live-streams .streams-item .video{
+	.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graph-item{
 		width: 100%;
-		height: auto;
+		margin-bottom: 20px;
 	}
-	.main-content .past-live-streams .streams-item .stream-detail{
+	
+	.sidebar-main-content .main-content .subs-communications-btns{
 		width: 100%;
-		padding-left: 0;
-		margin-top: 20px;
+		padding: 0 20px 20px 20px;
 	}
-
-	.main-content .past-live-streams .streams-item .stream-join-btn{
-		width: 100%;
-		margin-top: 10px;
-	}
-	.main-content .past-live-streams .streams-item .stream-join-btn button{
-		width: 100%;
-	}
-
-	.main-content .live-stream .live-stream-heading{
-		font-size: 20px;
-	}
-	.main-content .live-stream{
-		padding: 0 10px;
-	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-video{
-		width: 100%;
-	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments{
-		width: 100%;
-	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments .header{
-		justify-content: flex-start;
-	}
-	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
-		height: 220px;
-		overflow: auto;
-	}
-	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
-		width: 80%;
-	}
-	.live-stream .live-stream-controls{
-		width: 95%;
-		margin-top: 20px;
-		padding-bottom: 50px;
-		align-items: center;
-	}
-	.live-stream .live-stream-controls button{
-		width: 30px;
-		height: 30px;
-	}
-	.live-stream .live-stream-controls button img{
-		width: 15px;
-	}
-	.live-stream .live-stream-controls .finish-stream-btn{
-		padding: 10px 20px;
-		font-size: 18px;
-	}
-	.live-stream .end-watching-btn{
-		padding-bottom: 50px;
-	}
-	.live-stream .end-watching-btn a{
-		font-size: 18px;
-	}
-
 	.main-content .communications{
 		flex-wrap: wrap;
 		padding: 10px;
@@ -2394,93 +1946,6 @@ Styles For Responsiveness
 	.main-content .communications .inbox .calling-controls{
 		width: 90%;
 		margin: 40px auto;
-	}
-
-	.main-content .user-profile .user-profile-header .profile-info-btns{
-		width: 100%;
-	}
-	.main-content .user-profile .user-profile-header .profile-info-btns button{
-		font-size: 16px;
-	}
-	.main-content .user-profile .user-profile-body .user-profile-data{
-		width: 100%;
-		margin: auto;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-name p{
-		font-size: 24px;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form{
-		width: 100%;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont{
-		width: 100%;
-		margin-bottom: 0;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont .form-group-half{
-		width: 100%;
-		margin-bottom: 20px;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form .update-profile-btn{
-		width: 100%;
-		margin-top: 10px;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form .update-profile-btn button{
-		width: 100%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item{
-		width: 100%;
-		margin-bottom: 20px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body{
-		width: 100%;
-	}
-	.user-profile #ECommerceInfo.user-profile-body{
-		padding: 20px 10px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-header .plan-name{
-		font-size: 30px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .standard-plan.pricing-plan-item .pricing-plan-item-body .plan-price{
-		font-size: 30px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-price span{
-		font-size: 22px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description p{
-		font-size: 17px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features{
-		width: 100%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .text{
-		width: 80%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn{
-		width: 100%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .subscribe-btn button{
-		font-size: 16px;
-		width: 47%;
-	}
-	.payment-card{
-		width: 95%;
-		margin-top: -200px;
-	}
-	.payment-card .heading h2{
-		font-size: 30px;
-	}
-	.payment-card .description p{
-		font-size: 20px;
-		padding: 0 20px;
-	}
-	.payment-card .card-details{
-		width: 95%;
-	}
-	.payment-card .card-details form .cust-form-group-cont{
-		margin-bottom: 0;
-	}
-	.payment-card .card-details form .cust-form-group{
-		width: 100%;
 	}
 
 	.modal-content{
@@ -2613,54 +2078,17 @@ Styles For Responsiveness
 	.sidebar-main-content .main-content{
 		width: 100%;
 	}
-	.main-content .past-live-streams .past-live-streams-header .streams-btns{
-		width: 60%;
+
+	.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graph-item img{
+		height: 100%;
 	}
-	.main-content .past-live-streams .past-streams-items{
-		width: 100%;
-		height: auto;
-	}
-	.main-content .past-live-streams .streams-item .stream-detail{
-		width: 70%;
-	}
-	.main-content .past-live-streams .streams-item .video{
-		height: auto;
-	}
-	.main-content .past-live-streams .streams-item .stream-detail .stream-viewers{
-		display: none;
-	}
-	.main-content .past-live-streams .streams-item .stream-join-btn{
-		width: 100%;
-		text-align: center;
-		margin-top: 10px;
+	.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data-cont{
+		height: 250px;
 	}
 
-	.main-content .live-stream .live-stream-heading{
-		font-size: 30px;
+	.sidebar-main-content .main-content .subs-communications-btns{
+		width: 50%;
 	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-video{
-		width: 65%;
-	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments{
-		width: 35%;
-	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments .header{
-		justify-content: flex-start;
-	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .live-chat-btn span{
-		display: none;
-	}
-	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
-		height: 220px;
-		overflow: auto;
-	}
-	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
-		width: 75%;
-	}
-	.live-stream .live-stream-controls{
-		width: 75%;
-	}
-
 	.main-content .communications{
 		padding: 10px;
 	}
@@ -2686,35 +2114,6 @@ Styles For Responsiveness
 	}
 	.main-content .communications .inbox .calling-controls{
 		width: 90%;
-	}
-
-	.main-content .user-profile .user-profile-header .profile-info-btns{
-		width: 55%;
-	}
-	.main-content .user-profile .user-profile-body .user-profile-data{
-		width: 95%;
-		margin: auto;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form{
-		width: 90%;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont .form-group-half{
-		width: 48%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item{
-		width: 100%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description p{
-		padding: 0 10px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features{
-		width: 90%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .text{
-		width: 85%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li span{
-		font-size: 14px;
 	}
 
 	.modal{
@@ -2804,55 +2203,17 @@ Styles For Responsiveness
 	.sidebar-main-content .main-content{
 		width: 75%;
 	}
-	.main-content .past-live-streams .past-live-streams-header .streams-btns{
-		width: 60%;
-	}
-	.main-content .past-live-streams .past-live-streams-header .streams-btns button{
-		font-size: 18px;
-	}
-	.main-content .past-live-streams .past-live-streams-header .join-as-guest-btn button{
-		font-size: 18px;
-		padding: 15px 30px;
-	}
-	.main-content .past-live-streams .past-streams-items{
-		width: 100%;
-		height: 1200px;
-	}
-	.main-content .past-live-streams .streams-item .stream-detail{
-		width: 70%;
-	}
-	.main-content .past-live-streams .streams-item .stream-join-btn{
-		width: 100%;
-		text-align: center;
-		margin-top: 10px;
-	}
 
-	.main-content .live-stream .live-stream-heading{
-		font-size: 30px;
+	.sidebar-main-content .main-content .report-data .report-data-graphs .report-data-graph-item img{
+		height: 100%;
 	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-video{
-		width: 65%;
+	.sidebar-main-content .main-content .report-data .report-data-graphs .total-sales-data-cont{
+		height: 250px;
 	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments{
-		width: 35%;
+	
+	.sidebar-main-content .main-content .subs-communications-btns{
+		width: 50%;
 	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments .header{
-		justify-content: flex-start;
-	}
-	.main-content .live-stream .live-stream-video-comments .live-stream-comments .header .live-chat-btn span{
-		display: none;
-	}
-	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-items{
-		height: 220px;
-		overflow: auto;
-	}
-	.live-stream .live-stream-video-comments .live-stream-comments .comments-body .comments-footer .message{
-		width: 70%;
-	}
-	.live-stream .live-stream-controls{
-		width: 75%;
-	}
-
 	.main-content .communications{
 		padding: 10px;
 	}
@@ -2871,35 +2232,6 @@ Styles For Responsiveness
 	}
 	.main-content .communications .inbox .calling-controls{
 		width: 90%;
-	}
-
-	.main-content .user-profile .user-profile-header .profile-info-btns{
-		width: 55%;
-	}
-	.main-content .user-profile .user-profile-body .user-profile-data{
-		width: 90%;
-	}
-
-	.user-profile .user-profile-body .user-profile-data .user-profile-form{
-		width: 90%;
-	}
-	.user-profile .user-profile-body .user-profile-data .user-profile-form .form-group-half-cont .form-group-half{
-		width: 48%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item{
-		width: 100%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-description p{
-		padding: 0 10px;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features{
-		width: 90%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li .text{
-		width: 85%;
-	}
-	.user-profile .user-profile-body .pricing-plan-items .pricing-plan-item .pricing-plan-item-body .plan-features ul li span{
-		font-size: 14px;
 	}
 
 	.modal{

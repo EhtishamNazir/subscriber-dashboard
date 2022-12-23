@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/panel.css">
+<body>
+<!-- Header Section Starts -->
+<header class="header">
+  <div class="toggler-btn">
+    <button onclick="openSidebar()">&#9776;</button>
+  </div>
+  <div class="logo">
+    <img src="img/dashboard-logo.png" alt="Logo" />
+  </div>
+  <div class="search-bar-notification">
+    <div class="search-bar">
+      <form action="">
+        <div class="search-bar-container">
+          <div class="search-icon">
+            <img src="img/dashboard-search-icon.png" alt="Search" />
+          </div>
+          <input type="text" placeholder="Search..." />
+        </div>
+      </form>
+    </div>
+    <div class="notification">
+      <div class="notifications-dropdown">
+        <button onclick="showNotificationsDropdown()" id="notificationBtn" class="notification-btn">
+          <span></span>
+          <img src="img/notification-icon.png" alt="Notification Icon" />
+        </button>
+        <div id="notifications-dropdown-content" class="notifications-dropdown-content">
+          <div class="notifications-header">
+            <p>notifications</p>
+            <div class="notifications-header-dropdown">
+              <button class="notifications-header-dropdown-btn">
+                <img src="img/vertical-dots.png" alt="Vertical Dots" />
+              </button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-3.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-4.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header Section Ends -->
+
+<!-- Sidebar and Content Section Starts -->
+<div class="sidebar-main-content">
+  <!-- Sidebar Section Starts -->
+  <div class="sidebar">
+    <!-- User Section Starts -->
+    <div class="user-info-dropdown-cont">
+      <div class="user-info-cont">
+        <img class="user-img" src="img/admin-img.png" alt="Admin Image" />
+        <div class="name-type-cont">
+          <p class="name">smith</p>
+          <p class="type">admin</p>
+        </div>
+      </div>
+      <div class="user-dropdown-cont">
+        <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+          <img src="img/more-square.png" alt="More Info Icon" />
+        </button>
+        <div id="more-info-dropdown-content" class="dropdown-content">
+          <ul class="more-links">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- User Section Ends -->
+    <!-- Sidebar Links Section Starts -->
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="panel.html" class="active">
+            <img class="dark-icon" src="img/subs-report-icon.png" alt="Subs Report Icon" />
+            <img class="light-icon" src="img/subs-report-icon-light.png" alt="Subs Report Icon" />
+            <span>subscriber's report</span>
+          </a>
+        </li>
+        <li>
+          <a href="subs-communications.html">
+            <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+            <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+            <span>subscriber's communications</span>
+          </a>
+        </li>
+        <li>
+          <a href="ecom-utility.html">
+            <img class="dark-icon" src="img/utility-icon.png" alt="Utility Icon" />
+            <img class="light-icon" src="img/utility-icon-light.png" alt="User Icon" />
+            <span>eCommerce Utility</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="admin-profile.html">
+            <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+            <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+            profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            setting
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar Links Section Ends -->
+    <div class="logout-btn">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="img/logout-icon.png" alt="Logout" /> logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Sidebar Section Ends -->
+  <!-- Main Content Section Starts -->
+  <div class="main-content">
+    <div class="welcome-admin">
+      <div class="welcome-text-date">
+        <p class="welcome-text">Welcome Smith..!</p>
+        <p class="date">May 28, 2020</p>
+      </div>
+      <div class="time">
+        <p>09:30 PM UST</p>
+      </div>
+    </div>
+    <div class="report-btns">
+      <button class="report-btn-link active" onclick="openReportData(event, 'NewSubscribers')">New Subs<span>cribers</span></button>
+      <button class="report-btn-link" onclick="openReportData(event, 'AllSubscribers')">All Subs<span>cribers</span></button>
+      <button class="report-btn-link" onclick="openReportData(event, 'Applications')">Applications</button>
+    </div>
+    <div class="report-data" id="NewSubscribers" style="display: block;">
+      <div class="report-data-header">
+        <div class="report-data-header-title">Subscriber’s Report</div>
+        <div class="filter-btns">
+          <span>Sort by</span>
+          <button>day <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>week <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>month <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>year <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+        </div>
+      </div>
+      <div class="responsive-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="color-2">Subscriber’s ID</th>
+              <th>Active/Inactive</th>
+              <th class="color-2">Date Subscribed</th>
+              <th>Renewal Due Date</th>
+              <th class="color-2">Plan Type</th>
+              <th>Applications Without Plan</th>
+              <th>More Application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>006</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>007</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>008</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>009</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>010</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+            </tr>
+            <tr>
+              <td>011</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+    <div class="report-data" id="AllSubscribers">
+      <div class="report-data-graphs">
+        <div class="report-data-graph-item">
+          <img src="img/graph-1.png" alt="Graph Icon" />
+        </div>
+        <div class="report-data-graph-item">
+          <img src="img/graph-2.png" alt="Graph Icon" />
+        </div>
+        <div class="total-sales-data-cont">
+          <div class="total-sales-data">
+            <div class="total-sales-data-title">total sale</div>
+            <div class="revenue-generated">
+              <p>revenue generated</p>
+              <p class="amount">2,000.00$</p>
+            </div>
+            <div class="report-data-graphs-footer">
+              <div class="footer-item">
+                <p>Upcoming</p>
+                <p class="amount">1,800.20$</p>
+              </div>
+              <div class="footer-item">
+                <p>Total Loss</p>
+                <p class="amount">200.00$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="report-data-header">
+        <div class="report-data-header-title">Subscriber’s Report</div>
+        <div class="filter-btns">
+          <span>Sort by</span>
+          <button>day <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>week <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>month <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>year <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+        </div>
+      </div>
+      <div class="responsive-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="color-2">Subscriber’s ID</th>
+              <th>Active/Inactive</th>
+              <th class="color-2">Date Subscribed</th>
+              <th>Renewal Due Date</th>
+              <th class="color-2">Plan Type</th>
+              <th>Applications Without Plan</th>
+              <th>More Application</th>
+              <th class="color-2">Date Registered</th>
+              <th>Renewal Due Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Standard</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Premium</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>006</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Standard</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>007</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>008</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Premium</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>009</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>010</td>
+              <td class="active-text">Active</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Premium</td>
+              <td><img src="img/green-cross-icon.png" alt="Cross Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+            <tr>
+              <td>011</td>
+              <td>InActive</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+              <td>Basic</td>
+              <td><img src="img/red-tick-icon.png" alt="Tick Icon" /></td>
+              <td>-------</td>
+              <td>20-04-2022</td>
+              <td class="primary-text">20-04-2026</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+    <div class="report-data" id="Applications">
+      <div class="report-data-header">
+        <div class="report-data-header-title">Subscriber’s Report</div>
+        <div class="filter-btns">
+          <span>Sort by</span>
+          <button>day <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>week <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>month <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+          <button>year <img src="img/arrow-down-icon.png" alt="Arrow Down Iocn" /></button>
+        </div>
+      </div>
+      <div class="responsive-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="color-2">Application Name</th>
+              <th>Number By Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Application Name 01</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 02</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 03</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 04</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 05</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 06</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 07</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 09</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 10</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+            <tr>
+              <td>Application Name 11</td>
+              <td class="active-text">20-04-2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Main Content Section Ends -->
+</div>
+<!-- Sidebar and Content Section Ends -->
+
+<!-- Mobile Sidebar Section Starts -->
+<div id="mobileSidebar" class="mobileSidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+  <!-- User Section Starts -->
+  <div class="user-info-dropdown-cont">
+    <div class="user-info-cont">
+      <img class="user-img" src="img/admin-img.png" alt="Admin Image" />
+      <div class="name-type-cont">
+        <p class="name">Smith</p>
+        <p class="type">admin</p>
+      </div>
+    </div>
+    <div class="user-dropdown-cont">
+      <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+        <img src="img/more-square.png" alt="More Info Icon" />
+      </button>
+      <div id="more-info-dropdown-content" class="dropdown-content">
+        <ul class="more-links">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- User Section Ends -->
+  <!-- Sidebar Links Section Starts -->
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="panel.html" class="active">
+          <img class="dark-icon" src="img/subs-report-icon.png" alt="Subs Report Icon" />
+          <img class="light-icon" src="img/subs-report-icon-light.png" alt="Subs Report Icon" />
+          <span>subscriber's report</span>
+        </a>
+      </li>
+      <li>
+        <a href="subs-communications.html">
+          <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+          <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+          <span>subscriber's communications</span>
+        </a>
+      </li>
+      <li>
+        <a href="ecom-utility.html">
+          <img class="dark-icon" src="img/utility-icon.png" alt="Utility Icon" />
+          <img class="light-icon" src="img/utility-icon-light.png" alt="User Icon" />
+          <span>eCommerce Utility</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="divider"></div>
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="admin-profile.html">
+          <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+          <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+          profile
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          setting
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Sidebar Links Section Ends -->
+  <div class="logout-btn">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="img/logout-icon.png" alt="Logout" /> logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Mobile Sidebar Section Ends -->
+
+
+
+  <script src="js/main.js"></script>
+  <script>
+    function showUserMoreInfoDropdown() {
+      var moreInfoDropdownContent = document.getElementById("more-info-dropdown-content");
+      moreInfoDropdownContent.classList.toggle("active");
+    }
+    function showNotificationsDropdown() {
+      var notificationsDropdownContent = document.getElementById("notifications-dropdown-content");
+      var notificationBtn = document.getElementById("notificationBtn");
+      notificationsDropdownContent.classList.toggle("active");
+      notificationBtn.classList.toggle("active");
+    }
+  </script>
+  <script>
+    function openSidebar() {
+      document.getElementById("mobileSidebar").style.width = "80%";
+      document.getElementById("main").style.marginLeft = "80%";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeSidebar() {
+      document.getElementById("mobileSidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+  <script>
+    function openReportData(evt, reportType) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("report-data");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("report-btn-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(reportType).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</head>

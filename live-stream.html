@@ -34,10 +34,100 @@
     </div>
     <div class="notification">
       <a href="live-stream.html" class="stream-btn active">start live stream</a>
-      <button class="notification-btn">
-        <span></span>
-        <img src="img/notification-icon.png" alt="Notification Icon" />
-      </button>
+      <div class="notifications-dropdown">
+        <button onclick="showNotificationsDropdown()" id="notificationBtn" class="notification-btn">
+          <span></span>
+          <img src="img/notification-icon.png" alt="Notification Icon" />
+        </button>
+        <div id="notifications-dropdown-content" class="notifications-dropdown-content">
+          <div class="notifications-header">
+            <p>notifications</p>
+            <div class="notifications-header-dropdown">
+              <button class="notifications-header-dropdown-btn">
+                <img src="img/vertical-dots.png" alt="Vertical Dots" />
+              </button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-3.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-4.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -138,8 +228,9 @@
         </div>
         <div class="live-stream-comments">
           <div class="header">
-            <button class="live-chat-btn">live chat</button>
+            <button class="live-chat-btn"><span>live</span> chat</button>
             <p class="viewers">249 <img src="img/eye-icon.png" alt="Eye Icon" /></p>
+            <button id="liveStreamJoiningInvitationModalBtn" class="invite-btn">invite</button>
           </div>
           <div class="comments-body">
             <div class="comments-items">
@@ -333,27 +424,132 @@
 </div>
 <!-- Mobile Sidebar Section Ends -->
 
-<!-- Join As Guest Modal -->
-<!-- <div id="joinAsGuestModal" class="modal" style="display: block;">
+<!-- Join Live Stream inivitation Modal -->
+<div id="liveStreamJoiningInvitationModal" class="modal">
   <div class="modal-content">
     <div class="modal-content-header">
-      <h1 class="heading">Join as Guest</h1>
+      <h1 class="heading">Live Stream Joining Invitation</h1>
     </div>
     <div class="modal-content-body">
-      <p class="modal-content-body-text">Paste the link Here. To Join Live</p>
-      <p class="modal-content-body-text">Streaming as a Guest</p>
-      <div class="paste-stream-link">
+      <div class="modal-content-body-users">
+        <div class="users-item">
+          <div class="users-item-img">
+            <img src="img/subs-img-1.png" alt="User Image" />
+          </div>
+          <div class="users-item-text">
+            <p class="name">Mark Sam <span>Subscriber</span></p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="users-item-add-btn">
+            <button><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="users-item">
+          <div class="users-item-img">
+            <img src="img/subs-img-2.png" alt="User Image" />
+          </div>
+          <div class="users-item-text">
+            <p class="name">Mark Sam <span>Subscriber</span></p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="users-item-add-btn">
+            <button><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="users-item">
+          <div class="users-item-img">
+            <img src="img/subs-img-3.png" alt="User Image" />
+          </div>
+          <div class="users-item-text">
+            <p class="name">Mark Sam <span>Subscriber</span></p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="users-item-add-btn">
+            <button><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="users-item">
+          <div class="users-item-img">
+            <img src="img/subs-img-4.png" alt="User Image" />
+          </div>
+          <div class="users-item-text">
+            <p class="name">Mark Sam <span>Subscriber</span></p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="users-item-add-btn">
+            <button><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="users-item">
+          <div class="users-item-img">
+            <img src="img/subs-img-5.png" alt="User Image" />
+          </div>
+          <div class="users-item-text">
+            <p class="name">Mark Sam <span>Subscriber</span></p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="users-item-add-btn">
+            <button><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+        <div class="users-item">
+          <div class="users-item-img">
+            <img src="img/subs-img-6.png" alt="User Image" />
+          </div>
+          <div class="users-item-text">
+            <p class="name">Mark Sam <span>Subscriber</span></p>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="users-item-add-btn">
+            <button><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="invitation-url">
         <form action="">
-          <input type="text" placeholder="Paste Link Here" />
+          <div class="invitation-url-input-field">
+            <span>url</span>
+            <input type="text" placeholder="http://afternoon.example.com/balance/boy.php" />
+            <button type="button"><img src="img/copy-icon.png" alt="Copy Icon" /></button>
+          </div>
           <div class="login-register-btns">
-            <button id="joinAsGuestJoinBtn" type="button" class="active">Join</button>
-            <button id="joinAsGuestCancelInviteBtn" type="button">Cancel Invite</button>
+            <button id="shareViaModalBtn" type="button" class="active">Share</button>
+            <button id="liveStreamJoiningInvitationModalCancelBtn" type="button">Cancel Invite</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-</div> -->
+</div>
+<div id="shareViaModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-content-header">
+      <h1 class="heading">Share Via</h1>
+    </div>
+    <div class="modal-content-body">
+      <div class="share-live-stream-mediums">
+        <div class="share-medium-item">
+          <button><img src="img/tw-medium-img.png" alt="Twitter Image" /></button>
+          <p>Facebook</p>
+        </div>
+        <div class="share-medium-item">
+          <button><img src="img/fb-medium-img.png" alt="Facebook Image" /></button>
+          <p>Whatsapp</p>
+        </div>
+        <div class="share-medium-item">
+          <button><img src="img/wa-medium-img.png" alt="WhatsApp Image" /></button>
+          <p>Twitter</p>
+        </div>
+      </div>
+      <form action="">
+        <div class="login-register-btns">
+          <button id="shareViaModalShareBtn" type="button" class="active">Share</button>
+          <button id="shareViaModalCancelBtn" type="button">Cancel Invite</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <!-- Modals Section Ends -->
 
   <script src="js/main.js"></script>
@@ -361,6 +557,12 @@
     function showUserMoreInfoDropdown() {
       var moreInfoDropdownContent = document.getElementById("more-info-dropdown-content");
       moreInfoDropdownContent.classList.toggle("active");
+    }
+    function showNotificationsDropdown() {
+      var notificationsDropdownContent = document.getElementById("notifications-dropdown-content");
+      var notificationBtn = document.getElementById("notificationBtn");
+      notificationsDropdownContent.classList.toggle("active");
+      notificationBtn.classList.toggle("active");
     }
   </script>
   <script>
@@ -398,6 +600,37 @@
       evt.currentTarget.className += " active";
     }
   </script>
+  <script>
+    // Get the modal
+    var liveStreamJoiningInvitationModal = document.getElementById("liveStreamJoiningInvitationModal");
+    var shareViaModal = document.getElementById("shareViaModal");
+
+    // Get the button that opens the modal
+    var liveStreamJoiningInvitationModalBtn = document.getElementById("liveStreamJoiningInvitationModalBtn");
+    var liveStreamJoiningInvitationModalCancelBtn = document.getElementById("liveStreamJoiningInvitationModalCancelBtn");
+    var shareViaModalBtn = document.getElementById("shareViaModalBtn");
+    var shareViaModalShareBtn = document.getElementById("shareViaModalShareBtn");
+    var shareViaModalCancelBtn = document.getElementById("shareViaModalCancelBtn");
+
+    // When the user clicks the button, open the modal 
+    liveStreamJoiningInvitationModalBtn.onclick = function() {
+      liveStreamJoiningInvitationModal.style.display = "block";
+    }
+    liveStreamJoiningInvitationModalCancelBtn.onclick = function() {
+      liveStreamJoiningInvitationModal.style.display = "none";
+    }
+    shareViaModalBtn.onclick = function() {
+      shareViaModal.style.display = "block";
+    }
+    shareViaModalShareBtn.onclick = function() {
+      shareViaModal.style.display = "none";
+      liveStreamJoiningInvitationModal.style.display = "none";
+      window.location.replace("live-stream.html");
+    }
+    shareViaModalCancelBtn.onclick = function() {
+      shareViaModal.style.display = "none";
+    }
+  </script>
   
-y</body>
+  </body>
 </head>

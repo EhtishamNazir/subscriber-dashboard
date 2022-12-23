@@ -33,10 +33,100 @@
       </form>
     </div>
     <div class="notification">
-      <button class="notification-btn">
-        <span></span>
-        <img src="img/notification-icon.png" alt="Notification Icon" />
-      </button>
+      <div class="notifications-dropdown">
+        <button onclick="showNotificationsDropdown()" id="notificationBtn" class="notification-btn">
+          <span></span>
+          <img src="img/notification-icon.png" alt="Notification Icon" />
+        </button>
+        <div id="notifications-dropdown-content" class="notifications-dropdown-content">
+          <div class="notifications-header">
+            <p>notifications</p>
+            <div class="notifications-header-dropdown">
+              <button class="notifications-header-dropdown-btn">
+                <img src="img/vertical-dots.png" alt="Vertical Dots" />
+              </button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-3.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-4.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -137,7 +227,7 @@
         </div>
         <div class="live-stream-comments">
           <div class="header">
-            <button class="live-chat-btn">live chat</button>
+            <button class="live-chat-btn"><span>live</span> chat</button>
             <p class="viewers">249 <img src="img/eye-icon.png" alt="Eye Icon" /></p>
           </div>
           <div class="comments-body">
@@ -357,6 +447,12 @@
       var moreInfoDropdownContent = document.getElementById("more-info-dropdown-content");
       moreInfoDropdownContent.classList.toggle("active");
     }
+    function showNotificationsDropdown() {
+      var notificationsDropdownContent = document.getElementById("notifications-dropdown-content");
+      var notificationBtn = document.getElementById("notificationBtn");
+      notificationsDropdownContent.classList.toggle("active");
+      notificationBtn.classList.toggle("active");
+    }
   </script>
   <script>
     function openSidebar() {
@@ -394,5 +490,5 @@
     }
   </script>
   
-y</body>
+</body>
 </head>

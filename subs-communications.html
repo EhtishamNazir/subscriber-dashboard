@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subscribers Communications</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/panel.css">
+<body>
+<!-- Header Section Starts -->
+<header class="header">
+  <div class="toggler-btn">
+    <button onclick="openSidebar()">&#9776;</button>
+  </div>
+  <div class="logo">
+    <img src="img/dashboard-logo.png" alt="Logo" />
+  </div>
+  <div class="search-bar-notification">
+    <div class="search-bar">
+      <form action="">
+        <div class="search-bar-container">
+          <div class="search-icon">
+            <img src="img/dashboard-search-icon.png" alt="Search" />
+          </div>
+          <input type="text" placeholder="Search..." />
+        </div>
+      </form>
+    </div>
+    <div class="notification">
+      <div class="notifications-dropdown">
+        <button onclick="showNotificationsDropdown()" id="notificationBtn" class="notification-btn">
+          <span></span>
+          <img src="img/notification-icon.png" alt="Notification Icon" />
+        </button>
+        <div id="notifications-dropdown-content" class="notifications-dropdown-content">
+          <div class="notifications-header">
+            <p>notifications</p>
+            <div class="notifications-header-dropdown">
+              <button class="notifications-header-dropdown-btn">
+                <img src="img/vertical-dots.png" alt="Vertical Dots" />
+              </button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-3.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-4.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-1.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+          <div class="notifications-item">
+            <div class="notifications-item-img">
+              <img src="img/viewer-img-2.png" alt="Image" />
+            </div>
+            <div class="notifications-item-text">
+              <p class="name">Mark Sam</p>
+              <p class="description">Started a New Live Stream. Click join to Watch Live Stream.</p>
+            </div>
+            <div class="notifications-item-btns">
+              <a class="join-btn" href="live-stream.html">Join</a>
+              <button class="ignore-btn">ignore</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header Section Ends -->
+
+<!-- Sidebar and Content Section Starts -->
+<div class="sidebar-main-content">
+  <!-- Sidebar Section Starts -->
+  <div class="sidebar">
+    <!-- User Section Starts -->
+    <div class="user-info-dropdown-cont">
+      <div class="user-info-cont">
+        <img class="user-img" src="img/admin-img.png" alt="Admin Image" />
+        <div class="name-type-cont">
+          <p class="name">smith</p>
+          <p class="type">admin</p>
+        </div>
+      </div>
+      <div class="user-dropdown-cont">
+        <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+          <img src="img/more-square.png" alt="More Info Icon" />
+        </button>
+        <div id="more-info-dropdown-content" class="dropdown-content">
+          <ul class="more-links">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- User Section Ends -->
+    <!-- Sidebar Links Section Starts -->
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="panel.html">
+            <img class="dark-icon" src="img/subs-report-icon.png" alt="Subs Report Icon" />
+            <img class="light-icon" src="img/subs-report-icon-light.png" alt="Subs Report Icon" />
+            <span>subscriber's report</span>
+          </a>
+        </li>
+        <li>
+          <a href="subs-communications.html" class="active">
+            <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+            <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+            <span>subscriber's communications</span>
+          </a>
+        </li>
+        <li>
+          <a href="ecom-utility.html">
+            <img class="dark-icon" src="img/utility-icon.png" alt="Utility Icon" />
+            <img class="light-icon" src="img/utility-icon-light.png" alt="User Icon" />
+            <span>eCommerce Utility</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="sidebar-links">
+      <ul>
+        <li>
+          <a href="admin-profile.html">
+            <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+            <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+            profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+            setting
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Sidebar Links Section Ends -->
+    <div class="logout-btn">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="img/logout-icon.png" alt="Logout" /> logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Sidebar Section Ends -->
+  <!-- Main Content Section Starts -->
+  <div class="main-content">
+    <div class="welcome-admin">
+      <div class="welcome-text-date">
+        <p class="welcome-text">Welcome Smith..!</p>
+        <p class="date">May 28, 2020</p>
+      </div>
+      <div class="time">
+        <p>09:30 PM UST</p>
+      </div>
+    </div>
+    <div class="subs-communications-btns">
+      <button class="subs-communications-btn-link active">alerts</button>
+      <button class="subs-communications-btn-link">Support</span></button>
+    </div>
+    <div class="communications">
+      <div class="subscribers">
+        <div class="subscribers-header">
+          <div class="messages-calls-btns">
+            <button class="messages-calls-btns-link active" onclick="openMessagesCalls(event, 'Messages', 'ChatBox', 'ChatInviteBtn')">messages</button>
+            <button class="messages-calls-btns-link" onclick="openMessagesCalls(event, 'Calls', 'CallingBox', 'CallInviteBtn')">calls</button> 
+          </div>
+          <div class="chat-btn" id="ChatInviteBtn" style="display: block;">
+            <a href="#">chat <img src="img/add.png" alt="Plus Icon" /></a>
+          </div>
+          <div class="chat-btn" id="CallInviteBtn">
+            <a href="#">Add <img src="img/add.png" alt="Plus Icon" /></a>
+          </div>
+        </div>
+        <div id="Messages" class="subscribers-body" style="display: block;">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Angle Doll</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time mx-auto">
+              <p class="messages-counter">1</p>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">mark henry</p>
+              <p class="status">typing...</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">04:34 pm</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">adam smith</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time mx-auto">
+              <p class="messages-counter">1</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">zampa lilly</p>
+              <p class="status">typing...</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">suse henry</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilroy crawly</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">smith thomas</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilchrist adam</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+        </div>
+        <div id="Calls" class="subscribers-body">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Angle Doll</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">mark henry</p>
+              <p class="status">Missed Call  05:30 PM.</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">adam smith</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">zampa lilly</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">suse henry</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilroy crawly</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">smith thomas</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilchrist adam</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inbox" id="ChatBox" style="display: block;">
+        <div class="inbox-header">
+          <div class="active-user">
+            <div class="active-user-img">
+              <img src="img/subs-img-2.png" alt="User Image" />
+            </div>
+            <div class="active-user-text">
+              <p class="name">mark henry</p>
+              <p class="status">online</p>
+            </div>
+          </div>
+          <div class="inbox-header-action-btns">
+            <button><img src="img/info.png" alt="Info Icon" /></button>
+          </div>
+        </div>
+        <div class="inbox-body">
+          <div class="inbox-body-messages">
+            <div class="news-letter-images">
+              <img src="img/news-letter-img.png" alt="News Letter" />
+              <img src="img/news-letter-img.png" alt="News Letter" />
+            </div>
+          </div>
+          <div class="inbox-footer">
+            <form action="">
+              <input type="text" class="message" placeholder="Write Message" />
+              <button class="send-msg-btn" type="submit">
+                <img src="img/send-icon.png" alt="Send Icon" />
+              </button>
+              <div class="upload">
+                <label class="upload-area">
+                  <input type="file">
+                  <span class="upload-button">
+                    <img src="img/attach-file-2.png" alt="Upload File" />
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="inbox" id="CallingBox">
+        <div class="calling-user">
+          <div class="calling-user-img">
+            <img src="img/calling-user-img.png" alt="Calling User Image" />
+          </div>
+          <div class="calling-user-name">
+            <p>Adam Smith</p>
+          </div>
+          <div class="calling-status">
+            <p>Calling...</p>
+          </div>
+          <div class="calling-controls">
+            <button><img src="img/mute-icon.png" alt="Mute Icon" /></button>
+            <button><img src="img/stop-video-icon.png" alt="Stop Video Icon" /></button>
+            <button class="main-btn"><img src="img/phone-icon-white.png" alt="Phone Icon" /></button>
+            <button><img src="img/volume-icon.png" alt="Volume Icon" /></button>
+            <button><img src="img/open-cam-icon.png" alt="Open Camera Icon" /></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Content Section Ends -->
+</div>
+<!-- Sidebar and Content Section Ends -->
+
+<!-- Mobile Sidebar Section Starts -->
+<div id="mobileSidebar" class="mobileSidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+  <!-- User Section Starts -->
+  <div class="user-info-dropdown-cont">
+    <div class="user-info-cont">
+      <img class="user-img" src="img/admin-img.png" alt="Admin Image" />
+      <div class="name-type-cont">
+        <p class="name">Smith</p>
+        <p class="type">admin</p>
+      </div>
+    </div>
+    <div class="user-dropdown-cont">
+      <button onclick="showUserMoreInfoDropdown()" class="dropdown-btn">
+        <img src="img/more-square.png" alt="More Info Icon" />
+      </button>
+      <div id="more-info-dropdown-content" class="dropdown-content">
+        <ul class="more-links">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- User Section Ends -->
+  <!-- Sidebar Links Section Starts -->
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="panel.html">
+          <img class="dark-icon" src="img/subs-report-icon.png" alt="Subs Report Icon" />
+          <img class="light-icon" src="img/subs-report-icon-light.png" alt="Subs Report Icon" />
+          <span>subscriber's report</span>
+        </a>
+      </li>
+      <li>
+        <a href="subs-communications.html" class="active">
+          <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
+          <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
+          <span>subscriber's communications</span>
+        </a>
+      </li>
+      <li>
+        <a href="ecom-utility.html">
+          <img class="dark-icon" src="img/utility-icon.png" alt="Utility Icon" />
+          <img class="light-icon" src="img/utility-icon-light.png" alt="User Icon" />
+          <span>eCommerce Utility</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="divider"></div>
+  <div class="sidebar-links">
+    <ul>
+      <li>
+        <a href="admin-profile.html">
+          <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
+          <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
+          profile
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img class="dark-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          <img class="light-icon" src="img/setting-icon.png" alt="Setting Icon" />
+          setting
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Sidebar Links Section Ends -->
+  <div class="logout-btn">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="img/logout-icon.png" alt="Logout" /> logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Mobile Sidebar Section Ends -->
+
+
+
+  <script src="js/main.js"></script>
+  <script>
+    function showUserMoreInfoDropdown() {
+      var moreInfoDropdownContent = document.getElementById("more-info-dropdown-content");
+      moreInfoDropdownContent.classList.toggle("active");
+    }
+    function showNotificationsDropdown() {
+      var notificationsDropdownContent = document.getElementById("notifications-dropdown-content");
+      var notificationBtn = document.getElementById("notificationBtn");
+      notificationsDropdownContent.classList.toggle("active");
+      notificationBtn.classList.toggle("active");
+    }
+  </script>
+  <script>
+    function openSidebar() {
+      document.getElementById("mobileSidebar").style.width = "80%";
+      document.getElementById("main").style.marginLeft = "80%";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+
+    function closeSidebar() {
+      document.getElementById("mobileSidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+  <script>
+    function openReportData(evt, reportType) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("report-data");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("report-btn-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(reportType).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</body>
+</head>

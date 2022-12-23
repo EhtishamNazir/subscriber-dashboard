@@ -165,14 +165,14 @@
     <div class="sidebar-links">
       <ul>
         <li>
-          <a href="dashboard.html" class="active">
+          <a href="dashboard.html">
             <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
             <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
             dashboard
           </a>
         </li>
         <li>
-          <a href="communications.html">
+          <a href="communications.html" class="active">
             <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
             <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
             communications
@@ -220,250 +220,371 @@
   <!-- Sidebar Section Ends -->
   <!-- Main Content Section Starts -->
   <div class="main-content">
-    <div class="past-live-streams">
-      <div class="past-live-streams-header">
-        <div class="streams-btns">
-          <button class="past-ongoing-stream-link active" onclick="openCity(event, 'PastLiveStreams')">Past <span>Live Streams</span></button>
-          <button class="past-ongoing-stream-link" onclick="openCity(event, 'OngoingStreams')">Ongoing <span>Streams</span></button>
+    <div class="communications">
+      <div class="subscribers">
+        <div class="subscribers-header">
+          <div class="messages-calls-btns">
+            <button class="messages-calls-btns-link active" onclick="openMessagesCalls(event, 'Messages', 'ChatBox', 'ChatInviteBtn')">messages</button>
+            <button class="messages-calls-btns-link" onclick="openMessagesCalls(event, 'Calls', 'CallingBox', 'CallInviteBtn')">calls</button> 
+          </div>
+          <div class="chat-btn" id="ChatInviteBtn" style="display: block;">
+            <a href="#">chat <img src="img/add.png" alt="Plus Icon" /></a>
+          </div>
+          <div class="chat-btn" id="CallInviteBtn">
+            <a href="#">Add <img src="img/add.png" alt="Plus Icon" /></a>
+          </div>
         </div>
-        <div class="join-as-guest-btn">
-          <button id="joinAsGuestModalBtn"><span>join as</span> guest</button>
+        <div id="Messages" class="subscribers-body" style="display: block;">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Angle Doll</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time mx-auto">
+              <p class="messages-counter">1</p>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">mark henry</p>
+              <p class="status">typing...</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">04:34 pm</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">adam smith</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time mx-auto">
+              <p class="messages-counter">1</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">zampa lilly</p>
+              <p class="status">typing...</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">suse henry</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilroy crawly</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">smith thomas</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilchrist adam</p>
+              <p class="status">online</p>
+            </div>
+            <div class="subscribers-item-time">
+              <p class="time">yesterday</p>
+            </div>
+          </div>
+        </div>
+        <div id="Calls" class="subscribers-body">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Angle Doll</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">mark henry</p>
+              <p class="status">Missed Call  05:30 PM.</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">adam smith</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">zampa lilly</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">suse henry</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilroy crawly</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">smith thomas</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilchrist adam</p>
+              <p class="status">Missed Call  05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time">
+              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="past-streams-items" id="PastLiveStreams" style="display: block;">
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
+      <div class="inbox" id="ChatBox" style="display: block;">
+        <div class="inbox-header">
+          <div class="active-user">
+            <div class="active-user-img">
+              <img src="img/subs-img-2.png" alt="User Image" />
+            </div>
+            <div class="active-user-text">
+              <p class="name">mark henry</p>
+              <p class="status">online</p>
+            </div>
           </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          <div class="inbox-header-action-btns">
+            <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+            <button><img src="img/videocam.png" alt="Videocam Icon" /></button>
+            <button><img src="img/info.png" alt="Info Icon" /></button>
           </div>
         </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img-2.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
+        <div class="inbox-body">
+          <div class="inbox-body-messages">
+            <div class="chat-date-time">
+              <p>Today <span>14:00 PM</span></p>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img-3.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          <div class="inbox-footer">
+            <form action="">
+              <input type="text" class="message" placeholder="Write Message" />
+              <button class="send-msg-btn" type="submit">
+                <img src="img/send-icon.png" alt="Send Icon" />
+              </button>
+              <div class="upload">
+                <label class="upload-area">
+                  <input type="file">
+                  <span class="upload-button">
+                    <img src="img/attach-file-2.png" alt="Upload File" />
+                  </span>
+                </label>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-      <div class="past-streams-items" id="OngoingStreams">
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
+      <div class="inbox" id="CallingBox">
+        <div class="calling-user">
+          <div class="calling-user-img">
+            <img src="img/calling-user-img.png" alt="Calling User Image" />
           </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          <div class="calling-user-name">
+            <p>Adam Smith</p>
           </div>
-          <div class="stream-join-btn">
-            <button id="liveStreamModalJoinBtn">join</button>
+          <div class="calling-status">
+            <p>Calling...</p>
           </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-          <div class="stream-join-btn">
-            <button>join</button>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-          <div class="stream-join-btn">
-            <button>join</button>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-          <div class="stream-join-btn">
-            <button>join</button>
+          <div class="calling-controls">
+            <button><img src="img/mute-icon.png" alt="Mute Icon" /></button>
+            <button><img src="img/stop-video-icon.png" alt="Stop Video Icon" /></button>
+            <button class="main-btn"><img src="img/phone-icon-white.png" alt="Phone Icon" /></button>
+            <button><img src="img/volume-icon.png" alt="Volume Icon" /></button>
+            <button><img src="img/open-cam-icon.png" alt="Open Camera Icon" /></button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
   <!-- Main Content Section Ends -->
 </div>
@@ -500,14 +621,14 @@
   <div class="sidebar-links">
     <ul>
       <li>
-        <a href="dashboard.html" class="active">
+        <a href="dashboard.html">
           <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
           <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
           dashboard
         </a>
       </li>
       <li>
-        <a href="communications.html">
+        <a href="communications.html" class="active">
           <img class="dark-icon" src="img/comment-icon.png" alt="Comment Icon" />
           <img class="light-icon" src="img/comment-icon-light.png" alt="Comment Icon" />
           communications
@@ -627,24 +748,36 @@
     }
   </script>
   <script>
-    function openCity(evt, cityName) {
+    function openMessagesCalls(evt, tabName, tabName2, tabName3) {
       // Declare all variables
-      var i, tabcontent, tablinks;
+      var i, tabcontent, tablinks, tabcontent2;
 
       // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("past-streams-items");
+      tabcontent = document.getElementsByClassName("subscribers-body");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
 
+      tabcontent2 = document.getElementsByClassName("inbox");
+      for (i = 0; i < tabcontent2.length; i++) {
+        tabcontent2[i].style.display = "none";
+      }
+
+      tabcontent3 = document.getElementsByClassName("chat-btn");
+      for (i = 0; i < tabcontent3.length; i++) {
+        tabcontent3[i].style.display = "none";
+      }
+
       // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("past-ongoing-stream-link");
+      tablinks = document.getElementsByClassName("messages-calls-btns-link");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
 
       // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(cityName).style.display = "block";
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(tabName2).style.display = "block";
+      document.getElementById(tabName3).style.display = "block";
       evt.currentTarget.className += " active";
     }
   </script>

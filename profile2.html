@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>Profile</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Font -->
@@ -33,7 +33,6 @@
       </form>
     </div>
     <div class="notification">
-      <a href="live-stream.html" class="stream-btn">start live stream</a>
       <div class="notifications-dropdown">
         <button onclick="showNotificationsDropdown()" id="notificationBtn" class="notification-btn">
           <span></span>
@@ -165,7 +164,7 @@
     <div class="sidebar-links">
       <ul>
         <li>
-          <a href="dashboard.html" class="active">
+          <a href="dashboard.html">
             <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
             <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
             dashboard
@@ -191,7 +190,7 @@
     <div class="sidebar-links">
       <ul>
         <li>
-          <a href="profile.html">
+          <a href="profile.html" class="active">
             <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
             <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
             profile
@@ -220,247 +219,247 @@
   <!-- Sidebar Section Ends -->
   <!-- Main Content Section Starts -->
   <div class="main-content">
-    <div class="past-live-streams">
-      <div class="past-live-streams-header">
-        <div class="streams-btns">
-          <button class="past-ongoing-stream-link active" onclick="openCity(event, 'PastLiveStreams')">Past <span>Live Streams</span></button>
-          <button class="past-ongoing-stream-link" onclick="openCity(event, 'OngoingStreams')">Ongoing <span>Streams</span></button>
-        </div>
-        <div class="join-as-guest-btn">
-          <button id="joinAsGuestModalBtn"><span>join as</span> guest</button>
+    <div class="user-profile">
+      <div class="user-profile-header">
+        <div class="profile-info-btns">
+          <button class="profile-info-btn-link active" onclick="showProfileInfo(event, 'EditProfile')">Edit <span>Profile</span></button>
+          <button class="profile-info-btn-link" onclick="showProfileInfo(event, 'ECommerceInfo')">eCommerce <span>Info</span></button>
         </div>
       </div>
-      <div class="past-streams-items" id="PastLiveStreams" style="display: block;">
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
+      <div id="EditProfile" class="user-profile-body" style="display: block;">
+        <div class="user-profile-data">
+          <div class="user-profile-img">
+            <img src="img/profile-img-2.png" alt="Profile Image" />
+            <div class="upload">
+              <label class="upload-area">
+                <input type="file">
+                <span class="upload-button">
+                  <img src="img/profile-img-upload-btn-img.png" alt="Upload File" />
+                </span>
+              </label>
+            </div>
           </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          <div class="user-profile-name">
+            <p>Gavano Alex <span>( Subscriber )</span></p>
           </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img-2.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img-3.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
+          <div class="user-profile-form">
+            <form action="">
+              <div class="form-group-half-cont">
+                <div class="form-group-half">
+                  <label for="">first name</label>
+                  <input type="text" value="Gavano" class="cust-form-control" />
+                </div>
+                <div class="form-group-half">
+                  <label for="">last name</label>
+                  <input type="text" value="Alex" class="cust-form-control" />
+                </div>
+              </div>
+              <div class="form-group-cont">
+                <label for="">email</label>
+                <input type="email" value="gavanoalex@email.com" class="cust-form-control" />
+              </div>
+              <div class="form-group-half-cont">
+                <div class="form-group-half">
+                  <label for="">password</label>
+                  <input type="password" value="gavanoalex" class="cust-form-control" />
+                </div>
+                <div class="form-group-half">
+                  <label for="">confirm password</label>
+                  <input type="password" value="gavanoalex" class="cust-form-control" />
+                </div>
+              </div>
+              <div class="update-profile-btn">
+                <button>update profile</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-      <div class="past-streams-items" id="OngoingStreams">
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
+      <div id="ECommerceInfo" class="user-profile-body">
+        <!-- Pricing Plans Section Starts -->
+        <div class="pricing-plan-items">
+          <div class="pricing-plan-item">
+            <div class="pricing-plan-item-header">
+              <h4 class="plan-name">basic</h4>
+            </div>
+            <div class="pricing-plan-item-body">
+              <div class="plan-price">
+                <h2>50$ <span>/month</span></h2>
+              </div>
+              <div class="plan-description">
+                <p>A Basic plan for better Use in Future</p>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/orange-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="subscribe-btn">
+                <button>subscribe</button>
+              </div>
+            </div>
           </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
+          <div class="standard-plan pricing-plan-item">
+            <div class="pricing-plan-item-header">
+              <h4 class="plan-name">standard</h4>
             </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
+            <div class="pricing-plan-item-body">
+              <div class="plan-price">
+                <h2>100$ <span>/month</span></h2>
+              </div>
+              <div class="plan-description">
+                <p>A Standard plan for better Use in Future </p>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/blue-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="subscribe-btn">
+                <button>subscribe</button>
+              </div>
             </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
           </div>
-          <div class="stream-join-btn">
-            <button id="liveStreamModalJoinBtn">join</button>
+          <div class="premium-plan pricing-plan-item">
+            <div class="pricing-plan-item-header">
+              <h4 class="plan-name">premium</h4>
+            </div>
+            <div class="pricing-plan-item-body">
+              <div class="plan-price">
+                <h2>200$ <span>/month</span></h2>
+              </div>
+              <div class="plan-description">
+                <p>A Premium plan for better Use in Future </p>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="tick-circle">
+                      <img src="img/purple-tick-circle.png" alt="Tick Circle" />
+                    </div> 
+                    <div class="text">
+                      <span>Lorem ipsum dolor sit amet con</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="subscribe-btn">
+                <button>subscribe</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-          <div class="stream-join-btn">
-            <button>join</button>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-          <div class="stream-join-btn">
-            <button>join</button>
-          </div>
-        </div>
-        <div class="streams-item">
-          <div class="video">
-            <a href="#">
-              <img src="img/video-img.png" alt="Video Thumbnail" />
-              <button class="video-play-btn"><img src="img/video-play-icon.png" alt="Play Icon" /></button>
-            </a>
-          </div>
-          <div class="stream-detail">
-            <div class="stream-title">
-              <p>Loserfruit has been using the MV7 Podcast Microphone to level up her sound on stream.</p>
-            </div>
-            <div class="views-upload-time">
-              <p class="views-text">20 Views</p>
-              <p class="upload-time-text">3 Hours Ago</p>
-            </div>
-            <div class="stream-viewers">
-              <p>
-                <img src="img/viewer-img-1.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-2.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-3.png" alt="Viewer Image" />
-                <img class="viewer-img" src="img/viewer-img-4.png" alt="Viewer Image" />
-                +16 Others have viewed your Live Stream.
-              </p>
-            </div>
-            <p class="stream-detail-description">you might stream be for fun or a side hustle or a business. But here are a bunch of things I've learnt from all of my mistakes in streaming.</p>
-          </div>
-          <div class="stream-join-btn">
-            <button>join</button>
-          </div>
-        </div>
+        <!-- Pricing Plans Section Ends -->
       </div>
     </div>
 
@@ -500,7 +499,7 @@
   <div class="sidebar-links">
     <ul>
       <li>
-        <a href="dashboard.html" class="active">
+        <a href="dashboard.html">
           <img class="dark-icon" src="img/dashboard-icon.png" alt="Dashboard Icon" />
           <img class="light-icon" src="img/dashboard-icon-light.png" alt="Dashboard Icon" />
           dashboard
@@ -526,7 +525,7 @@
   <div class="sidebar-links">
     <ul>
       <li>
-        <a href="profile.html">
+        <a href="profile.html" class="active">
           <img class="dark-icon" src="img/profile-icon.png" alt="Profile Icon" />
           <img class="light-icon" src="img/profile-icon-light.png" alt="Profile Icon" />
           profile
@@ -627,18 +626,18 @@
     }
   </script>
   <script>
-    function openCity(evt, cityName) {
+    function showProfileInfo(evt, cityName) {
       // Declare all variables
       var i, tabcontent, tablinks;
 
       // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("past-streams-items");
+      tabcontent = document.getElementsByClassName("user-profile-body");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
 
       // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("past-ongoing-stream-link");
+      tablinks = document.getElementsByClassName("profile-info-btn-link");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
