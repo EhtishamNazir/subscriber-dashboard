@@ -229,34 +229,128 @@
       </div>
     </div>
     <div class="subs-communications-btns">
-      <button class="subs-communications-btn-link active">alerts</button>
-      <button class="subs-communications-btn-link">Support</span></button>
+      <button class="subs-communications-btn-link active" onclick="openAlertsSupport(event, 'AlertsCompanyNewsLetterBody', 'AlertsHeader')">alerts</button>
+      <button class="subs-communications-btn-link" onclick="openAlertsSupport(event, 'SupportLiveChatRequests', 'SupportHeader')">Support</span></button>
     </div>
     <div class="communications">
       <div class="subscribers">
-        <div class="subscribers-header">
-          <div class="messages-calls-btns">
-            <button class="messages-calls-btns-link active" onclick="openMessagesCalls(event, 'Messages', 'ChatBox', 'ChatInviteBtn')">messages</button>
-            <button class="messages-calls-btns-link" onclick="openMessagesCalls(event, 'Calls', 'CallingBox', 'CallInviteBtn')">calls</button> 
-          </div>
-          <div class="chat-btn" id="ChatInviteBtn" style="display: block;">
-            <a href="#">chat <img src="img/add.png" alt="Plus Icon" /></a>
-          </div>
-          <div class="chat-btn" id="CallInviteBtn">
-            <a href="#">Add <img src="img/add.png" alt="Plus Icon" /></a>
+        <div id="AlertsHeader" class="subscribers-header" style="display: block;">
+          <div class="dropdown">
+            <a href="#" class="js-link">Company's Newsletter <i class="fa fa-chevron-down"></i></a>
+            <ul class="js-dropdown-list">
+              <li>
+                <button onclick="openNewsLetterListMessages(event, 'NewsLetter', 'AlertsCompanyNewsLetterBody')" class="js-dropdown-list-link active">Company's Newsletter</button>
+              </li>
+              <li>
+                <button onclick="openNewsLetterListMessages(event, 'SubsMessages', 'AlertsSubsMessagesBody')" class="js-dropdown-list-link">Subsscriber's Messages</button>
+              </li>
+              <li>
+                <button onclick="openNewsLetterListMessages(event, 'SubsListMessages', 'AlertsSubsListMessagesBody')" class="js-dropdown-list-link">Subscriber's List Messages</button>
+              </li>
+            </ul>
           </div>
         </div>
-        <div id="Messages" class="subscribers-body" style="display: block;">
+        <div id="SupportHeader" class="subscribers-header">
+          <div class="dropdown">
+            <a href="#" class="js-link">Live Chat Requests <i class="fa fa-chevron-down"></i></a>
+            <ul class="js-dropdown-list">
+              <li>
+                <button onclick="openNewsLetterListMessages(event, 'LiveChat', 'SupportLiveChatRequests')" class="js-dropdown-list-link active">Live Chat Requests</button>
+              </li>
+              <li>
+                <button onclick="openNewsLetterListMessages(event, 'OfflineForm','SupportOfflineFormHeader')" class="js-dropdown-list-link">Offline Form</button>
+              </li>
+              <li>
+                <button onclick="openNewsLetterListMessages(event, 'OfflineForm', 'SupportOfflineForm2Header')" class="js-dropdown-list-link">Offline Form 2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="AlertsCompanyNewsLetterBody" class="subscribers-body" style="display: block;">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time mx-auto">
+              <p class="messages-counter">3</p>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Company name 01</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+          </div>
+        </div>
+        <div id="AlertsSubsMessagesBody" class="subscribers-body">
           <div class="subscribers-item">
             <div class="subscribers-item-img">
               <img src="img/subs-img-1.png" alt="Subscriber Image" />
             </div>
             <div class="subscribers-item-text">
               <p class="name">Angle Doll</p>
-              <p class="status">online</p>
-            </div>
-            <div class="subscribers-item-time mx-auto">
-              <p class="messages-counter">1</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item active">
@@ -265,10 +359,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">mark henry</p>
-              <p class="status">typing...</p>
-            </div>
-            <div class="subscribers-item-time">
-              <p class="time">04:34 pm</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -277,10 +368,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">adam smith</p>
-              <p class="status">online</p>
-            </div>
-            <div class="subscribers-item-time mx-auto">
-              <p class="messages-counter">1</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -289,10 +377,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">zampa lilly</p>
-              <p class="status">typing...</p>
-            </div>
-            <div class="subscribers-item-time">
-              <p class="time">yesterday</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -301,10 +386,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">suse henry</p>
-              <p class="status">online</p>
-            </div>
-            <div class="subscribers-item-time">
-              <p class="time">yesterday</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -313,10 +395,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">gilroy crawly</p>
-              <p class="status">online</p>
-            </div>
-            <div class="subscribers-item-time">
-              <p class="time">yesterday</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -325,10 +404,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">smith thomas</p>
-              <p class="status">online</p>
-            </div>
-            <div class="subscribers-item-time">
-              <p class="time">yesterday</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -337,25 +413,18 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">gilchrist adam</p>
-              <p class="status">online</p>
-            </div>
-            <div class="subscribers-item-time">
-              <p class="time">yesterday</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
         </div>
-        <div id="Calls" class="subscribers-body">
+        <div id="AlertsSubsListMessagesBody" class="subscribers-body">
           <div class="subscribers-item">
             <div class="subscribers-item-img">
               <img src="img/subs-img-1.png" alt="Subscriber Image" />
             </div>
             <div class="subscribers-item-text">
               <p class="name">Angle Doll</p>
-              <p class="status">Missed Call  05:30 PM</p>
-            </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item active">
@@ -364,11 +433,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">mark henry</p>
-              <p class="status">Missed Call  05:30 PM.</p>
-            </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -377,11 +442,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">adam smith</p>
-              <p class="status">Missed Call  05:30 PM</p>
-            </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -390,11 +451,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">zampa lilly</p>
-              <p class="status">Missed Call  05:30 PM</p>
-            </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -403,11 +460,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">suse henry</p>
-              <p class="status">Missed Call  05:30 PM</p>
-            </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -416,11 +469,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">gilroy crawly</p>
-              <p class="status">Missed Call  05:30 PM</p>
-            </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -429,11 +478,7 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">smith thomas</p>
-              <p class="status">Missed Call  05:30 PM</p>
-            </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+              <p class="status">document PDF</p>
             </div>
           </div>
           <div class="subscribers-item">
@@ -442,16 +487,265 @@
             </div>
             <div class="subscribers-item-text">
               <p class="name">gilchrist adam</p>
-              <p class="status">Missed Call  05:30 PM</p>
+              <p class="status">document PDF</p>
             </div>
-            <div class="subscribers-item-time">
-              <button><img src="img/call-icon.png" alt="Call Icon" /></button>
-              <button><img src="img/videocam.png" alt="Video Call Icon" /></button>
+          </div>
+        </div>
+        <div id="SupportLiveChatRequests" class="subscribers-body">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Angle Doll</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="approve-decline-btns">
+              <button class="approve-btn">approve</button>
+              <button class="decline-btn">decline</button>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">mark henry</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="subscribers-item-time mx-auto">
+              <p class="time">approved</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">adam smith</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="approve-decline-btns">
+              <button class="approve-btn">approve</button>
+              <button class="decline-btn">decline</button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">zampa lilly</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="approve-decline-btns">
+              <button class="approve-btn">approve</button>
+              <button class="decline-btn">decline</button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">suse henry</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="approve-decline-btns">
+              <button class="approve-btn">approve</button>
+              <button class="decline-btn">decline</button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilroy crawly</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="approve-decline-btns">
+              <button class="approve-btn">approve</button>
+              <button class="decline-btn">decline</button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">smith thomas</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="approve-decline-btns">
+              <button class="approve-btn">approve</button>
+              <button class="decline-btn">decline</button>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilchrist adam</p>
+              <p class="status">Message at 05:30 PM</p>
+            </div>
+            <div class="approve-decline-btns">
+              <button class="approve-btn">approve</button>
+              <button class="decline-btn">decline</button>
+            </div>
+          </div>
+        </div>
+        <div id="SupportOfflineFormHeader" class="subscribers-body">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Angle Doll</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">mark henry</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">adam smith</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">zampa lilly</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">suse henry</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilroy crawly</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">smith thomas</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilchrist adam</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+        </div>
+        <div id="SupportOfflineForm2Header" class="subscribers-body">
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-1.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">Angle Doll</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item active">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-2.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">mark henry</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-3.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">adam smith</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-4.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">zampa lilly</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-5.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">suse henry</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-6.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilroy crawly</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-7.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">smith thomas</p>
+              <p class="status">document PDF</p>
+            </div>
+          </div>
+          <div class="subscribers-item">
+            <div class="subscribers-item-img">
+              <img src="img/subs-img-8.png" alt="Subscriber Image" />
+            </div>
+            <div class="subscribers-item-text">
+              <p class="name">gilchrist adam</p>
+              <p class="status">document PDF</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="inbox" id="ChatBox" style="display: block;">
+      <div class="inbox" id="NewsLetter">
         <div class="inbox-header">
           <div class="active-user">
             <div class="active-user-img">
@@ -491,23 +785,556 @@
           </div>
         </div>
       </div>
-      <div class="inbox" id="CallingBox">
-        <div class="calling-user">
-          <div class="calling-user-img">
-            <img src="img/calling-user-img.png" alt="Calling User Image" />
+      <div class="inbox" id="SubsMessages">
+        <div class="inbox-header">
+          <div class="active-user">
+            <div class="active-user-img">
+              <img src="img/subs-img-2.png" alt="User Image" />
+            </div>
+            <div class="active-user-text">
+              <p class="name">mark henry</p>
+              <p class="status">online</p>
+            </div>
           </div>
-          <div class="calling-user-name">
-            <p>Adam Smith</p>
+          <div class="inbox-header-action-btns">
+            <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+            <button><img src="img/videocam.png" alt="Videocam Icon" /></button>
+            <button><img src="img/info.png" alt="Info Icon" /></button>
           </div>
-          <div class="calling-status">
-            <p>Calling...</p>
+        </div>
+        <div class="inbox-body">
+          <div class="inbox-body-messages">
+            <div class="chat-date-time">
+              <p>Today <span>14:00 PM</span></p>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="calling-controls">
-            <button><img src="img/mute-icon.png" alt="Mute Icon" /></button>
-            <button><img src="img/stop-video-icon.png" alt="Stop Video Icon" /></button>
-            <button class="main-btn"><img src="img/phone-icon-white.png" alt="Phone Icon" /></button>
-            <button><img src="img/volume-icon.png" alt="Volume Icon" /></button>
-            <button><img src="img/open-cam-icon.png" alt="Open Camera Icon" /></button>
+          <div class="inbox-footer">
+            <form action="">
+              <input type="text" class="message" placeholder="Write Message" />
+              <button class="send-msg-btn" type="submit">
+                <img src="img/send-icon.png" alt="Send Icon" />
+              </button>
+              <div class="upload">
+                <label class="upload-area">
+                  <input type="file">
+                  <span class="upload-button">
+                    <img src="img/attach-file-2.png" alt="Upload File" />
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="inbox" id="SubsListMessages">
+        <div class="inbox-header">
+          <div class="active-user">
+            <div class="active-user-img">
+              <img src="img/subs-img-2.png" alt="User Image" />
+            </div>
+            <div class="active-user-text">
+              <p class="name">mark henry</p>
+              <p class="status">online</p>
+            </div>
+          </div>
+          <div class="inbox-header-action-btns">
+            <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+            <button><img src="img/videocam.png" alt="Videocam Icon" /></button>
+            <button><img src="img/info.png" alt="Info Icon" /></button>
+          </div>
+        </div>
+        <div class="inbox-body">
+          <div class="inbox-body-messages">
+            <div class="chat-date-time">
+              <p>Today <span>14:00 PM</span></p>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="inbox-footer">
+            <form action="">
+              <input type="text" class="message" placeholder="Write Message" />
+              <button class="send-msg-btn" type="submit">
+                <img src="img/send-icon.png" alt="Send Icon" />
+              </button>
+              <div class="upload">
+                <label class="upload-area">
+                  <input type="file">
+                  <span class="upload-button">
+                    <img src="img/attach-file-2.png" alt="Upload File" />
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="inbox" id="LiveChat">
+        <div class="inbox-header">
+          <div class="active-user">
+            <div class="active-user-img">
+              <img src="img/subs-img-2.png" alt="User Image" />
+            </div>
+            <div class="active-user-text">
+              <p class="name">mark henry</p>
+              <p class="status">online</p>
+            </div>
+          </div>
+          <div class="inbox-header-action-btns">
+            <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+            <button><img src="img/videocam.png" alt="Videocam Icon" /></button>
+            <button><img src="img/info.png" alt="Info Icon" /></button>
+          </div>
+        </div>
+        <div class="inbox-body">
+          <div class="inbox-body-messages">
+            <div class="chat-date-time">
+              <p>Today <span>14:00 PM</span></p>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="inbox-footer">
+            <form action="">
+              <input type="text" class="message" placeholder="Write Message" />
+              <button class="send-msg-btn" type="submit">
+                <img src="img/send-icon.png" alt="Send Icon" />
+              </button>
+              <div class="upload">
+                <label class="upload-area">
+                  <input type="file">
+                  <span class="upload-button">
+                    <img src="img/attach-file-2.png" alt="Upload File" />
+                  </span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="inbox" id="OfflineForm" style="display: block;">
+        <div class="inbox-header">
+          <div class="active-user">
+            <div class="active-user-img">
+              <img src="img/subs-img-2.png" alt="User Image" />
+            </div>
+            <div class="active-user-text">
+              <p class="name">mark henry</p>
+              <p class="status">online</p>
+            </div>
+          </div>
+          <div class="inbox-header-action-btns">
+            <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+            <button><img src="img/videocam.png" alt="Videocam Icon" /></button>
+            <button><img src="img/info.png" alt="Info Icon" /></button>
+          </div>
+        </div>
+        <div class="inbox-body">
+          <div class="inbox-body-messages">
+            <div class="offline-form-text-data">
+              <div class="offline-form-title">
+                <p>subject</p>
+              </div>
+              <div class="offline-form-description">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos.</p>
+              </div>
+            </div>
+            <div class="offline-form">
+              <form action="">
+                <input type="text" class="cust-form-control" placeholder="Subject" />
+                <textarea name="" id="" class="cust-form-control" cols="30" rows="25">Comment</textarea>
+              </form>
+            </div>
+          </div>
+          <div class="offline-form-reply-btn">
+            <button id="OfflineFormReplyBtn" class="reply-btn">reply</button>
+          </div>
+        </div>
+      </div>
+      <div class="inbox" id="OfflineForm2">
+        <div class="inbox-header">
+          <div class="active-user">
+            <div class="active-user-img">
+              <img src="img/subs-img-2.png" alt="User Image" />
+            </div>
+            <div class="active-user-text">
+              <p class="name">mark henry</p>
+              <p class="status">online</p>
+            </div>
+          </div>
+          <div class="inbox-header-action-btns">
+            <button><img src="img/call-icon.png" alt="Call Icon" /></button>
+            <button><img src="img/videocam.png" alt="Videocam Icon" /></button>
+            <button><img src="img/info.png" alt="Info Icon" /></button>
+          </div>
+        </div>
+        <div class="inbox-body">
+          <div class="inbox-body-messages">
+            <div class="chat-date-time">
+              <p>Today <span>14:00 PM</span></p>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>i don't remember anything 😄</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="other-user-msg">
+              <div class="other-user-msg-img">
+                <img src="img/subs-img-2.png" alt="User Image" />
+              </div>
+              <div class="other-user-msg-text">
+                <p>OMG 😲 do you remember what you did last night at the work night out?</p>
+                <p class="time-react">
+                  <button><img src="img/heart-icon.png" alt="Heart Icon" /></button>
+                  <span>18:12</span>
+                  <img src="img/check-icon.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+            <div class="your-msg">
+              <div class="your-msg-text">
+                <p>no haha</p>
+                <p class="time-react">
+                  <span>18:16</span>
+                  <img src="img/check-icon-white.png" alt="Check Icon" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="inbox-footer">
+            <form action="">
+              <input type="text" class="message" placeholder="Write Message" />
+              <button class="send-msg-btn" type="submit">
+                <img src="img/send-icon.png" alt="Send Icon" />
+              </button>
+              <div class="upload">
+                <label class="upload-area">
+                  <input type="file">
+                  <span class="upload-button">
+                    <img src="img/attach-file-2.png" alt="Upload File" />
+                  </span>
+                </label>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -603,7 +1430,7 @@
 <!-- Mobile Sidebar Section Ends -->
 
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <script>
     function showUserMoreInfoDropdown() {
@@ -631,24 +1458,85 @@
     }
   </script>
   <script>
-    function openReportData(evt, reportType) {
+    $(function() {
+      var list = $('.js-dropdown-list');
+      var link = $('.js-link');
+      link.click(function(e) {
+        e.preventDefault();
+        list.slideToggle(200);
+      });
+
+      list.find('li').click(function() {
+        var text = $(this).html();
+        var icon = '<i class="fa fa-chevron-down"></i>';
+        link.html(text+icon);
+        list.slideToggle(200);
+        if (text === '* Reset') {
+          link.html('Select one option'+icon);
+        }
+      });
+
+      $("#OfflineFormReplyBtn").click(function(){
+        $(".offline-form-text-data").hide();
+        $(".offline-form").show();
+      });
+    });
+  </script>
+  <script>
+    function openAlertsSupport(evt, type, headerType) {
       // Declare all variables
-      var i, tabcontent, tablinks;
+      var i, tabcontent, tablinks, tabcontent2;
 
       // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("report-data");
+      tabcontent = document.getElementsByClassName("subscribers-body");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
 
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent2 = document.getElementsByClassName("subscribers-header");
+      for (i = 0; i < tabcontent2.length; i++) {
+        tabcontent2[i].style.display = "none";
+      }
+
       // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("report-btn-link");
+      tablinks = document.getElementsByClassName("subs-communications-btn-link");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
 
       // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(reportType).style.display = "block";
+      document.getElementById(type).style.display = "block";
+      document.getElementById(headerType).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+
+    function openNewsLetterListMessages(evt, messageType, subsBodyType) {
+      // Declare all variables
+      var i, tabcontent, tablinks, tabcontent2;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("inbox");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent2 = document.getElementsByClassName("subscribers-body");
+      for (i = 0; i < tabcontent2.length; i++) {
+        tabcontent2[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("js-dropdown-list-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(messageType).style.display = "block";
+      document.getElementById(subsBodyType).style.display = "block";
       evt.currentTarget.className += " active";
     }
   </script>

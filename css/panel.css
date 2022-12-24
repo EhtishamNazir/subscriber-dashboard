@@ -596,13 +596,16 @@ Mobile Sidebar Styles
 	position: relative;
 	width: 100%;
 	display: block;
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 400;
-	color: #ffffff;
+	color: #0C0C0D;
 	padding: 15px 0;
+	padding-right: 10px;
 	text-transform: capitalize;
 	transition: all .3s ease;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 .mobileSidebar .sidebar-links ul li a:hover,
 .mobileSidebar .sidebar-links ul li a.active{
@@ -625,14 +628,15 @@ Mobile Sidebar Styles
 	vertical-align: middle;
 	transition: all .3s ease;
 	margin-right: 10px;
-	margin-left: 20px;
+	margin-left: 30px;
 	width: 30px;
+	height: auto;
 }
 .mobileSidebar .sidebar-links ul li a .light-icon{
 	display: none;
 }
 .mobileSidebar .sidebar-links ul li a.active .light-icon{
-	display: inline-block;
+	display: block;
 }
 .mobileSidebar .sidebar-links ul li a.active .dark-icon{
 	display: none;
@@ -963,7 +967,7 @@ Subscriber Communications Page Styles
 }
 .main-content .communications .subscribers .subscribers-header{
 	width: 100%;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
@@ -971,6 +975,57 @@ Subscriber Communications Page Styles
 	border-bottom: 1px solid #DFE0EB;
 	padding: 15px 10px;
 	border-radius: 10px 10px 0px 0px;
+	position: relative;
+}
+.main-content .communications .subscribers .subscribers-header.active{
+	display: block;
+}
+.main-content .communications .subscribers .subscribers-header .dropdown {
+	width: 70%;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+.main-content .communications .subscribers .subscribers-header .dropdown a {
+	display: block;
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: capitalize;
+	color: var(--color-3);
+	text-decoration: none;
+}
+.main-content .communications .subscribers .subscribers-header .dropdown .fa {
+	float: right;
+	font-weight: 300;
+	font-size: 18px;
+	color: var(--color-3);
+}
+.main-content .communications .subscribers .subscribers-header .dropdown ul {
+	width: 70%;
+	padding: 10px 0;
+	display: none;
+	position: absolute;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+.main-content .communications .subscribers .subscribers-header .dropdown ul li{
+	cursor: pointer;
+}
+.main-content .communications .subscribers .subscribers-header .dropdown ul li button{
+	font-size: 16px;
+	color: var(--color-3);
+	text-transform: capitalize;
+	text-align: left;
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	margin-bottom: 5px;
+}
+.main-content .communications .subscribers .subscribers-header .dropdown ul li button:hover,
+.main-content .communications .subscribers .subscribers-header .dropdown ul li button.active{
+	background-color: var(--color-2);
+	color: #ffffff;
 }
 .main-content .communications .subscribers .subscribers-header .messages-calls-btns{
 	width: 70%;
@@ -1048,53 +1103,76 @@ Subscriber Communications Page Styles
 	cursor: pointer;
 }
 .main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-img img{
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 }
 .main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-text{
-	width: 55%;
+	width: 60%;
 	margin-left: 20px;
 }
+/*.main-content .communications .subscribers #SupportLiveChatRequests.subscribers-body .subscribers-item{
+	padding: 10px 0;
+}*/
+.main-content .communications .subscribers #SupportLiveChatRequests.subscribers-body .subscribers-item .subscribers-item-text{
+	width: 45%;
+	margin-left: 10px;
+}
 .main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-text .name{
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
 	color: #000000;
 	text-transform: capitalize;
 	margin-bottom: 5px;
 }
 .main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-text .status{
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 400;
 	color: #A2A2A2;
 	text-transform: capitalize;
 }
-.main-content .communications .subscribers #Calls.subscribers-body .subscribers-item .subscribers-item-text .status{
-	font-size: 13px;
-}
-.main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-time{
-/*	border: 1px solid black;*/
+.main-content .communications .subscribers #SupportLiveChatRequests.subscribers-body .subscribers-item .subscribers-item-text .status{
+	font-size: 12px;
 }
 .main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-time .messages-counter{
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
 	line-height: 25px;
-	background: #E1E2FF;
-	color: var(--color-2);
-	font-size: 15px;
-	font-weight: 400;
+	background: #FFCAE3;
+	color: var(--color-3);
+	font-size: 14px;
+	font-weight: 600;
 	text-align: center;
 }
 .main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-time .time{
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
-	color: #A2A2A2;
+	color: var(--color-3);
 	text-align: center;
 	text-transform: capitalize;
 }
 .main-content .communications .subscribers .subscribers-body .subscribers-item .subscribers-item-time button img{
 	width: 20px;
 	margin-left: 5px;
+}
+.main-content .communications .subscribers .subscribers-body .subscribers-item .approve-decline-btns{
+/*	width: 40%;*/
+/*	border: 1px solid black;*/
+}
+.main-content .communications .subscribers .subscribers-body .subscribers-item .approve-decline-btns button{
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: #ffffff;
+	padding: 10px 10px;
+}
+.main-content .communications .subscribers .subscribers-body .subscribers-item .approve-decline-btns button.approve-btn{
+	background: #00B027;
+	border-radius: 5px;
+}
+.main-content .communications .subscribers .subscribers-body .subscribers-item .approve-decline-btns button.decline-btn{
+	background: #D20000;
+	border-radius: 5px;
 }
 .main-content .communications .inbox{
 	display: none;
@@ -1151,7 +1229,7 @@ Subscriber Communications Page Styles
 }
 .main-content .communications .inbox .inbox-body .inbox-body-messages{
 	width: 100%;
-	height: 610px;
+	height: 500px;
 	overflow: auto;
 	padding-right: 10px;
 }
@@ -1275,57 +1353,78 @@ Subscriber Communications Page Styles
 .main-content .communications .inbox .inbox-body .inbox-footer .upload label .upload-button img{
 	width: 25px;
 }
-.main-content .communications .inbox .calling-user-img{
-	margin: 70px 0 40px 0;
+.main-content .communications .inbox .inbox-body .offline-form-title{
+	padding: 40px 20px 10px 20px;
 }
-.main-content .communications .inbox .calling-user-img img{
-	width: 50%;
+.main-content .communications .inbox .inbox-body .offline-form-title p{
+	font-size: 24px;
+	font-weight: 600;
+	color: #000000;
+	text-transform: capitalize;
+}
+.main-content .communications .inbox .inbox-body .offline-form-description{
+	padding: 10px 20px;
+}
+.main-content .communications .inbox .inbox-body .offline-form-description p{
+	font-size: 20px;
+	font-weight: 400;
+	color: #000000;
+	line-height: 40px;
+	margin-bottom: 50px;
+}
+.main-content .communications .inbox .inbox-body .offline-form-reply-btn{
+	text-align: right;
+	margin-top: 20px;
+	padding-right: 40px;
+}
+.main-content .communications .inbox .inbox-body .offline-form-reply-btn .reply-btn{
+	font-size: 18px;
+	font-weight: 400;
+	color: #ffffff;
+	text-transform: capitalize;
+	background: #00B027;
+	border-radius: 5px;
+	padding: 15px 40px;
+}
+.main-content .communications .inbox .inbox-body .offline-form{
+	width: 100%;
+	display: none;
+	margin: 20px 0 20px 0;
+}
+.main-content .communications .inbox .inbox-body .offline-form .cust-form-control{
+	padding: 15px 20px;
+	width: 100%;
+	background: #FFFFFF;
+	border: 1.30933px solid #A5A6F6;
 	display: block;
-	margin: 0 auto;
+	margin-bottom: 15px;
+	border-radius: 13.0933px;
 }
-.main-content .communications .inbox .calling-user-name p{
-	font-size: 40px;
+
+/*-----------------------------
+Ecommerce utility Page Styles
+------------------------------*/
+.main-content .ecom-utility-report-data .report-data{
+	display: block;
+}
+.sidebar-main-content .main-content .report-data table td.status-btns button{
+	font-size: 12px;
 	font-weight: 600;
 	text-transform: capitalize;
-	color: #000000;
-	text-align: center;
-	margin-bottom: 10px;
+	color: #ffffff;
+	padding: 10px;
+	border-radius: 5px;
 }
-.main-content .communications .inbox .calling-status p{
-	font-size: 24px;
-	font-weight: 400;
-	text-transform: capitalize;
-	color: #000000;
-	text-align: center;
+.sidebar-main-content .main-content .report-data table td.status-btns button.approve-btn{
+	background: #00B027;
 }
-.main-content .communications .inbox .calling-controls{
-	width: 60%;
-	margin: 70px auto 50px auto;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+.sidebar-main-content .main-content .report-data table td.status-btns button.decline-btn{
+	background: #D20000;;
 }
-.main-content .communications .inbox .calling-controls button{
-	width: 45px;
-	height: 45px;
-	background: #FFFFFF;
-	border-radius: 50%;
-	box-shadow: 0px 0px 9.90783px rgba(0, 0, 0, 0.25);
+.sidebar-main-content .main-content .report-data table td.danger-color{
+	color: #D20000;
 }
-.main-content .communications .inbox .calling-controls button img{
-	vertical-align: middle;
-	width: 25px;
-}
-.main-content .communications .inbox .calling-controls button.main-btn{
-	width: 60px;
-	height: 60px;
-	background: #E90000;
-	margin: 0 10px;
-	box-shadow: 0px 0px 6.79555px rgba(0, 0, 0, 0.25);
-}
-.main-content .communications .inbox .calling-controls button.main-btn img{
-	width: 30px;
-}
+
 
 /*--------------------------------------
 Register and Login Pages Modals Styles
@@ -1940,13 +2039,18 @@ Styles For Responsiveness
 	.main-content .communications .inbox .inbox-body .other-user-msg{
 		width: 75%;
 	}
-	.main-content .communications .inbox .calling-user-img{
-		margin: 40px 0;
+	.main-content .communications .subscribers .subscribers-body .subscribers-item .approve-decline-btns{
+		width: 100%;
+		margin-top: 5px;
+		text-align: right;
 	}
-	.main-content .communications .inbox .calling-controls{
-		width: 90%;
-		margin: 40px auto;
+
+	.sidebar-main-content .main-content .report-data table td.status-btns button{
+		display: block;
+		width: 100%;
+		margin-bottom: 5px;
 	}
+
 
 	.modal-content{
 		width: 90%;
